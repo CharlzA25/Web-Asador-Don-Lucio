@@ -63,7 +63,7 @@ img{
   padding: 30px 0 0 0;
 }
 .header{
-  background: linear-gradient(to bottom, rgb(0 0 0 / .50), rgb(0 0 0 / .3)), url(/Assets/Menú.gif);
+  background: linear-gradient(to bottom, rgb(0 0 0 / .50), rgb(0 0 0 / .3)), url(/backgrounds/Menú.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,7 +97,10 @@ img{
  .logo img{
   margin-top: 5px;
   width: 80px;
-  
+ }
+ .logomenu img{
+  width: 50px;
+  margin-bottom: 5px;
  }
  .menu .navbar ul li{
   position: relative;
@@ -109,6 +112,7 @@ img{
   color: white;
   display: block;
   font-weight: 600;
+  margin-bottom: 20px;
  }
 
 .menu .navbar ul li a:hover{
@@ -193,11 +197,12 @@ h3{
 .our {
   margin-top: -50px;
   padding: 250px 0;
-  background: linear-gradient(to bottom, rgb(0 0 0 / .50), rgb(0 0 0 / .3)), url(/Assets/Guarniciones.jpeg);
+  background: linear-gradient(to bottom, rgb(0 0 0 / .50), rgb(0 0 0 / .3)), url(/Menu/Parrilla/Parrilla-Parrilla\ entraña.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  
 }
 .our h2{
   font-size: 35px;
@@ -209,6 +214,7 @@ h3{
   display: flex;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   margin-top: -50px;
+
 }
 
 .ofert-1{
@@ -220,7 +226,7 @@ h3{
   text-align: center;
 }
 .ofert-img{
-  height: 230px;
+  height: 260px;
   width: 100%;
 }
 .ofert-img img{
@@ -316,7 +322,7 @@ footer ul{
 
 .wrap-footer{
   display: grid;
-  grid-template-columns: 30% 20% 20% 15%;
+  grid-template-columns: 25% 20% 20% 20%;
   column-gap: 5%;
   padding: 1rem;
   margin: 2rem auto;
@@ -332,6 +338,7 @@ footer ul{
 .text-element-footer{
   line-height: 2;
   color: #d8ba88;
+  padding: 0;
 }
 
 .text-element-footer li a{
@@ -342,7 +349,9 @@ footer ul{
   display: flex;
   flex-wrap: wrap;
 }
-
+.redesxd{
+  margin: 10px;
+}
 .rrss-element-footer img{
   width: 45px;
 }
@@ -481,7 +490,7 @@ footer ul{
 .body-contact{
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)),url(./Assets/Contacus.jpg);
+  background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)),url(./Logo/Contacus.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
