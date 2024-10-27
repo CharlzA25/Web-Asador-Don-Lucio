@@ -123,7 +123,7 @@ img{
   display: none;
 }
 .menu-icono{
-  width: 27px;
+  width: 20px;
 }
 .menu label{
   cursor: pointer;
@@ -224,6 +224,7 @@ h3{
 .ofert-txt{
   padding: 25px;
   text-align: center;
+  width: 100%;
 }
 .ofert-img{
   height: 260px;
@@ -254,8 +255,11 @@ h3{
 .food{
   padding: 5px 0;
   text-align: center;
-  
+  display: none;
 } 
+.food.activa {
+  display: block;
+}
 
 .food h2{
   font-size: 45px;
@@ -683,7 +687,6 @@ form > button:hover,
 .menu-seleccion {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   margin-right: auto;
   margin-left: auto;
   background-color: #F4EFE1;
@@ -691,10 +694,10 @@ form > button:hover,
 }
 
 .menu-seleccion button {
-  padding: 5px;
-  margin: 5px;
+  padding: 1px;
+  margin: 10px;
   cursor: pointer;
-  background-color: #F4EFE1;
+  background-color: transparent;
   border: none;
   border-radius: 10px;
   transition: background-color 0.3s;
@@ -704,20 +707,22 @@ form > button:hover,
   justify-content: center;
   width: 80px;
   height: 100px;
+  line-height: 40px;
 }
 
 .menu-seleccion button img.icono {
   width: 50px;
   height: 50px;
+  max-width: 50px;
+  max-height: 50px;
   border-style: hidden;
   background-color: transparent;
-  padding: 5px;
-  
+  padding: px;
   margin-bottom: 5px;
 }
 
 .menu-seleccion button span {
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
 }
 
@@ -736,9 +741,10 @@ form > button:hover,
   }
 
   .menu-seleccion button {
-      width: 25%; /* Ajusta el ancho para permitir dos botones por fila */
-      margin-left: auto;
-      margin-right: auto;
+      width: 30%; /* Ajusta el ancho para permitir dos botones por fila */
+      margin-left: 10px;
+      margin-right: 10px;
+
   }
 }
 
@@ -801,3 +807,67 @@ form > button:hover,
     text-align: left;
 }
 
+.menudes-seleccion{
+  justify-content: center;
+  max-height: 120px;
+  border: 1px solid transparent;
+  display:flex;
+  overflow-x: auto;
+}
+.menudes-seleccion .icono{
+  width: 41px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: transparent;
+  margin-right: 2px;
+  border-color: transparent;
+}
+.menu-seleccion::-webkit-scrollbar{
+  width: 0;
+}
+.despla{
+  color: #AA0F2D;
+  background-color: black;
+  font-size: 50px0;
+  outline: none;
+  border: none;
+  padding: 0px 20px;
+  cursor: pointer;
+
+}
+.scroll-container {
+  display: flex;
+  align-items: center;
+}
+.scroll-button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  height: 10px;
+}
+
+/* Mostrar los botones en pantallas móviles */
+@media (max-width: 768px) {
+  .scroll-button {
+      display: block;
+  }
+
+  .menu-seleccion.container {
+      width: 100%;
+  }
+}
+
+/* Ocultar los botones en pantallas grandes */
+@media (min-width: 769px) {
+  .scroll-button {
+      display: none;
+  }
+
+  .menu-seleccion.container {
+      width: 100%;
+      overflow: visible; /* Para permitir la visualización completa sin desplazamiento */
+  }
+}
