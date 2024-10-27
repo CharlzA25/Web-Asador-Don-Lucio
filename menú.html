@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asador Don Lucio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./Assets/LogoSolo.png">
+</head>
+<body>
+    <header class="header-menu">
+        <div class="menu container"> 
+
+            <div class="logo">
+                <a href="/"><img src="./Assets/Logo2.png" alt="Asador Don lucio"></a></div>
+            <input type="checkbox" id="menu">
+            <label for="menu" class="checkbtn">
+              <img src="./Assets/menu.png" alt="menu" class="menu-icono">
+            </label>
+                <nav class="navbar">
+                    <ul>
+                    <li class="main-menu"><a href="index.html">Inicio</a></li>
+                    <li class="main-menu"><a href="Menú.html">Menú</a></li>
+                    <li class="main-menu"><a href="/">Sobre Nosotros</a></li>
+                    <li class="main-menu"><a href="contactanos.html">Contactanos</a></li>
+                </ul>
+                </nav>
+            
+        </div>
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>¡Todo por el fuego!</h1>
+            </div>
+        </div>
+       </header>
+       <div class="menu-seleccion container">
+        <button onclick="showSection('entradas')">
+            <img src="./Assets/EntradaI.png" alt="Entradas" class="icono"> Entradas
+        </button>
+        <button onclick="showSection('ensaladas')">
+            <img src="./Assets/Tierra icon.png" alt="Ensaladas" class="icono"> Ensaladas
+        </button>
+        <button onclick="showSection('cortes')">
+            <img src="./Assets/Fuego icon.png" alt="Cortes" class="icono"> Cortes
+        </button>
+        <button onclick="showSection('guarniciones')">
+            <img src="./Assets/Guarniciones.png" alt="Guarniciones" class="icono"> Guarniciones
+        </button>
+        <button onclick="showSection('del-mar')">
+            <img src="./Assets/Agua icon.png" alt="Del Mar" class="icono"> Del Mar
+        </button>
+        <button onclick="showSection('del-aire')">
+            <img src="./Assets/Aire icon.png" alt="Del Aire" class="icono"> Del Aire
+        </button>
+        <button onclick="showSection('postres')">
+            <img src="./Assets/Postres.png" alt="Postres" class="icono"> Postres
+        </button>
+        <button onclick="showSection('bebidas')">
+          <img src="./Assets/Bebidas.png" alt="bebidas" class="icono"> Bebidas
+      </button>
+        <button onclick="showSection('mixologia')">
+            <img src="./Assets/mixologia.png" alt="Bebidas" class="icono"> Mixología
+        </button>
+        <button onclick="showSection('menu-infantil')">
+          <img src="./Assets/minfantil.png" alt="Bebidas" class="icono"> Menú infantil
+      </button>
+      <button id="Tacos" onclick="showSection('tacos')">
+          <img src="./Assets/Taco.png" alt="Bebidas" class="icono"> Tacos
+      </button>
+      </div>
+  </div>
+
+       <section id="entradas" class="food container">
+        <h2>Entradas</h2>
+      <span>Nuestras entradas</span>
+<div class="menu2">
+    <div class="food-items">
+        <img src="./Assets/Menu/Entrada/Cassoulet de quesos.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description"> Cassoulet natural (250 g)</h5>
+                <h5 class="price">$235</h5>
+            </div>
+            <p>Mezcla de quesos con sabor suave acompañados de cebola morada y
+                romero, todo al vino tinto. Torti las nixtamalizadas hechas a mano para
+                servir.</p>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="./Assets/Menu/Entrada/Camembert con mermelada de cebolla3.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description"> Camembert con mermelada de tocino y cebolla (250 g)</h5>
+                <h5 class="price">$293</h5>
+            </div>
+            <p>Delicioso queso camembert al horno de leña acompañado de una
+                mermelada hecha con cebola caramelizada, virutas de tocino ahumado
+                y miel con perfume de café de altura.</p>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="./Assets/Menu/Entrada/Aguachile de Rib eye.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description"> Aguachile negro de Rib eye(150g de carne)</h5>
+                <h5 class="price">$314</h5>
+            </div>
+            <p>Fajitas de Rib eye a término medio ahogadas en una salsa negra tatemada
+                de chiles y limón, con rodajas de pepino, jitomates cherry y aguacate.</p>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="./Assets/Carne2.png" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description">Aguachile negro de camarón y pulpo (150 g de frutos del mar)</h5>
+                <h5 class="price">$255</h5>
+            </div>
+            <p>Camarones abiertos en mariposa con rodajas de pulpo pasados a la parri la
+                ahogadas en una salsa negra tatemada de chiles y limón, con rodajas de
+                pepino, jitomates cherry y aguacate.</p>
+            
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="./Assets/Menu/Entrada/Guacamole2.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description">Guacamole con totopos (250 g)</h5>
+                <h5 class="price">$124</h5>
+            </div>
+            <p>Combinación de la casa hecha de cremosos aguacates de Michoacán,
+                jitomate, cilantro, aceite de oliva y limón sazonada con sal artesanal.</p>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="./Assets/Menu/Entrada/Tacos de camarón.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5>Tacos (3) de camarón en tempura (130 g)</h5>
+                <h5 class="price">$212</h5>
+            </div>
+            <p>Camarones en torti la de harina cubiertos en tempura de maíz con chucrut
+                de col morada aderezados con mayonesa al chipotle adobado
+                acompañado de limón eureka asado.</p>
+        </div>
+    </div>
+</div>
+
+       </div>
+  </div>
+  </section>
+
+  <section id="ensaladas" class="food container">
+    <h2>Ensaladas</h2>
+  <span>Nuestras Ensaladas</span>
+<div class="menu2">
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+</div>
+
+   </div>
+</div>
+</section>
+
+<section id="cortes" class="food container">
+    <h2>Cortes</h2>
+  <span>Prueba nuestros cortes</span>
+<div class="menu2">
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+</div>
+
+   </div>
+</div>
+</section>
+
+<section id="guarniciones" class="food container">
+    <h2>Guarniciones</h2>
+  <span>Nuestras guarniciones</span>
+<div class="menu2">
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+</div>
+
+   </div>
+</div>
+</section>
+
+<section id="del-mar" class="food container">
+<h2>Del mar</h2>
+<span>Nuestros Mariscos</span>
+<div class="menu2">
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="del-aire" class="food container">
+<h2>Del aire</h2>
+<span>Nuestras aves</span>
+<div class="menu2">
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="postres" class="food container">
+    <h2>Postres</h2>
+  <span>Nuestros postres</span>
+<div class="menu2">
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5>Parrillada de prueba</h5>
+            <h5 class="price">$80</h5>
+        </div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+    </div>
+</div>
+</div>
+
+   </div>
+</div>
+</section>
+
+<section id="bebidas" class="food container">
+<h2>Bebidas</h2>
+<span>Bebidas frías</span>
+<div class="menu2">
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="mixologia" class="food container">
+<h2>Mixologia</h2>
+<span>Nuestra mixología</span>
+<div class="menu2">
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="menu-infantil" class="food container">
+<h2>Menú infantil</h2>
+<span>Nuestro menú para los niños</span>
+<div class="menu2">
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5>Parrillada de prueba</h5>
+        <h5 class="price">$80</h5>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="tacos" class="food container">
+<h2>Tacos</h2>
+<span>Nuestros tacos</span>
+<div class="menu2">
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5>Parrillada de prueba</h5>
+    <h5 class="price">$80</h5>
+</div>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5>Parrillada de prueba</h5>
+    <h5 class="price">$80</h5>
+</div>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5>Parrillada de prueba</h5>
+    <h5 class="price">$80</h5>
+</div>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5>Parrillada de prueba</h5>
+    <h5 class="price">$80</h5>
+</div>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5>Parrillada de prueba</h5>
+    <h5 class="price">$80</h5>
+</div>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5>Parrillada de prueba</h5>
+    <h5 class="price">$80</h5>
+</div>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. .</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+  <footer class="footer">
+    <div class="wrap-footer">
+      <div class="text-element-footer element-footer">
+        <h3>Restaurante</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit praesentium alias dignissimos vel necessitatibus in, corrupti asperiores nostrum repellendus ut architecto assumenda enim nam. Et magni optio veritatis placeat maxime.</p>
+      </div>
+
+      <div class="text-element-footer element-footer">
+        <h5>Dirección *Acá estará dirección*</h5>
+        <ul>
+        <li>Calle</li>
+        <li>Ciudad/Municipio</li>
+        <li>Contacto: *Número telefónico*</li>
+       </ul>
+     </div>
+
+     <div class="text-element-footer element-footer">
+      <h4>Más información</h4>
+      <ul>
+      <li><a href="">Inicio</a></li>
+      <li><a href=""></a>Menú</li>
+      <li><a href=""></a>Contáctanos</li>
+    </ul>
+    </div>
+
+    <div class="rrss-element-footer element-footer">
+      <h5>Redes sociales</h5>
+      <ul>
+      <li><a href="/"><img src="./Assets/facebook.png" alt="Facebook"></a></li>
+      <li><a href="/"><img src="./Assets/instagram.png" alt="Instagram"></a></li>
+      <li><a href="/"><img src="./Assets/social.png" alt="Whatsapp"></a></li>
+      </ul>
+    </div>
+
+   </div>
+   <div class="footer-creds">
+    <div class="copy-creds">
+      <p>©Carlos A.2024 • Todos los derechos reservados</p>
+     </div>
+     <div class="legal-creds">
+      <ul>
+        <li><a href=""></a>Política de privacidad</li>
+        <li><a href=""></a>Aviso legal</li>
+        <li><a href=""></a>Terminos y condiciones</li>
+      </ul>
+    </div>
+
+    </div>
+  </footer>
+      <script src="script.js"></script>
+
+</body>
+</html>
