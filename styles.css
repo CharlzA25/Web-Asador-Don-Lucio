@@ -53,7 +53,7 @@ img{
   padding: 30px 0 30px 0;
 }
 .header-menu{
-  background: linear-gradient(to bottom, rgb(0 0 0 / .70), rgb(0 0 0 / .3)), url(/Menu/Parrilla/Parrilla-Asador\ entero.jpg);
+  background: linear-gradient(to bottom, rgb(0 0 0 / .70), rgb(0 0 0 / .3)), url(./Menu/Parrilla/Parrilla-Asador\ entero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,13 +64,13 @@ img{
 }
 .header{
   background: linear-gradient(to bottom, rgb(0 0 0 / .50), rgb(0 0 0 / .3)), url(/backgrounds/Menú.gif);
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
   min-height: 70vh;
-  padding: 30px 0 0 0;
+  padding: 0px 0 0 0;
 }
 .menu{ 
   position: absolute;
@@ -80,22 +80,14 @@ img{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
  }
 .logo-index{
   width: 250px;
 }
- .logo{
-  position: relative;
-  color: aliceblue;
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 400;
-  margin-left: 20px;
-  border-color: white;
- }
+ 
+
  .logo img{
-  margin-top: 5px;
+  margin-top: 1px;
   width: 80px;
  }
  .logomenu img{
@@ -123,29 +115,13 @@ img{
   display: none;
 }
 .menu-icono{
-  width: 20px;
+  width: 30px;
 }
 .menu label{
   cursor: pointer;
   display: none;
 }
-.header-txt{
-  text-align: center;
-}
-.header-txt h1{
-  font-size: 75px;
-  font-family: "Red Hat Display", cursive;
-  color: white;
-  line-height: 1;
-  margin-bottom: 15px;
-}
 
-.header-txt p{
-    font-size: 35px;
-    color: aliceblue;
-    text-transform: uppercase;
-    font-weight: 60;
-}
 
 .information-content{
   display: flex;
@@ -162,10 +138,17 @@ img{
   background-color: white;
   height: 300px;
 }
+.information-c1{
+  padding: 45px;
+  text-align: center;
+  background-color: white;
+  height: 300px;
+}
+
 h3{
-  font-size: 45px;
-  font-family: "Red Hat Display", cursive;
-  margin-top: 15px;
+  font-size: 40px;
+  font-family:var(--Titulos);
+  margin-bottom: 15px;
   color: #404140;
 }
 .information2{
@@ -187,10 +170,11 @@ h3{
 }
 .btn-1{
   display: inline-block;
-  padding: 11px 35px;
+  padding: 15px 35px;
   border: 2px solid #d8ba88;
-  margin-top: 10px;
-  color: #d8ba88;
+  margin-top: 35px;
+  color: #af8740;
+  background-color: #fce5bd;
   text-transform: uppercase;
 }
 
@@ -219,19 +203,19 @@ h3{
 
 .ofert-1{
   flex-basis: 25%;
-  background-color: #F4EFE1;
+  
 }
 .ofert-txt{
   padding: 25px;
   text-align: center;
-  width: 100%;
+  background-color: #F4EFE1;
 }
 .ofert-img{
-  height: 260px;
+  height: 240px;
   width: 100%;
 }
 .ofert-img img{
-  height: 230px;
+  height: 240px;
   width: 100%;
 }
 .btn2{
@@ -239,7 +223,8 @@ h3{
   padding: 11px 35px;
   border: 2px solid #d8ba88;
   margin-top: 10px;
-  color: #d8ba88;
+  color: #af8740;
+  background-color: #fce5bd;
   text-transform: uppercase;
 }
 .bg {
@@ -260,55 +245,6 @@ h3{
 .food.activa {
   display: block;
 }
-
-.food h2{
-  font-size: 45px;
-  text-transform: uppercase;
-  display: block;
-  margin-top: 10px;
-  margin-bottom: 25px;
-  color: #404140;
-}
-.food span{
-  font-size: 15px;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 45px;
-  color: #404140;
-}
-.food-1{
-  margin-right: 50px;
-}
-
-.food-content{
-  padding: 0 100px;
-  display: flex;
-  justify-content: space-between;
-  text-align: left;
-}
-.food-1 h3{
-  font-family: "Tenor Sans", system-ui;
-  font-size: 15px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  color: #404140
-}
-.food-txt{
-  display: flex;
-  text-align: left;
-  margin-bottom: 15px;
-}
-.food-txt p{
-  font-size: 17px;
-  color: gray;
-}
-.precio{
-  font-size: 25px !important;
-  color: #d8ba88 !important;
-  font-weight: 700;
-  margin-left: 15px;
-}
-
 
 
 
@@ -407,9 +343,9 @@ footer ul{
 
 
 
-@media (max-width:990px){
+@media (max-width:991px){
   .menu{
-    padding: 20px;
+    padding: 1px 15px;
   }
   .menu label{
     display: initial;
@@ -419,7 +355,7 @@ footer ul{
     top: 100%;
     left: 0; 
     right: 0;
-    background-color: #AA0F2D;
+    background-color: var(--Background);
     display: none;
   }
 
@@ -439,7 +375,7 @@ footer ul{
   min-height: 0vh;
 }
 .header-content{
-  padding: 100px 20px;
+  padding: 100px 30px;
 }
 .information-content{
   display: flex;
@@ -452,7 +388,7 @@ footer ul{
 
 }
 .information2{
-  padding-bottom: 35px;
+  padding-bottom: 1px;
   background-color: #F4EFE1;
 }
 .ofert-content{
@@ -471,7 +407,7 @@ footer ul{
   margin-bottom: 25px;
 }
 .bg{
-  margin-top: 0;
+  margin-top: 25;
 }
   .food{
     padding: 30px;
@@ -549,9 +485,6 @@ footer ul{
   font-size:25px;
 }
 
-#Tacos {
-  display: none; /* Inicialmente oculto */
-}
 
 .links {
   display:flex;
@@ -694,21 +627,21 @@ form > button:hover,
 }
 
 .menu-seleccion button {
-  padding: 1px;
-  margin: 10px;
-  cursor: pointer;
-  background-color: transparent;
+  display: flex;
+  flex-direction: column; /* Coloca el ícono y el texto en columnas */
+  align-items: center; /* Centra el ícono y el texto horizontalmente */
+  background: none; /* Elimina el fondo predeterminado del botón */
+  border: none; /* Elimina los bordes predeterminados del botón */
+  padding: 10px; /* Espaciado interno del botón */
+  cursor: pointer; /* Cambia el cursor al pasar por el botón */
   border: none;
   border-radius: 10px;
-  transition: background-color 0.3s;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80px;
-  height: 100px;
-  line-height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
+
+
 
 .menu-seleccion button img.icono {
   width: 50px;
@@ -716,9 +649,10 @@ form > button:hover,
   max-width: 50px;
   max-height: 50px;
   border-style: hidden;
-  background-color: transparent;
-  padding: px;
   margin-bottom: 5px;
+  display: block; 
+  background-color: transparent;
+
 }
 
 .menu-seleccion button span {
@@ -730,6 +664,10 @@ form > button:hover,
   background-color: #ddd;
 }
 
+.Tacos{
+  text-align: center;
+
+}
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
   .menu-seleccion {
@@ -752,7 +690,7 @@ form > button:hover,
 /* Menú segunda opción*/
 
 .menu2{
-  padding: 10px 10px 30px 10px;
+  padding: 30px 1px 30px 1px;
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(280px,1fr));
   grid-gap: 30px 30px;
@@ -870,4 +808,27 @@ form > button:hover,
       width: 100%;
       overflow: visible; /* Para permitir la visualización completa sin desplazamiento */
   }
+}
+
+.menuh1{
+  color: #ddd;
+  font-size: 65px;
+  font-family: var(--Titulos);
+  text-align: center;
+}
+
+
+
+.food h2{
+  font-size: 50px;
+  padding-top: 20px;
+  font-family: var(--Titulos);
+  color: #282828;
+}
+
+.food span{
+  font-size: 30px;
+  margin: 40px;
+  font-family: var(--Titulos);
+  color: #282828;
 }
