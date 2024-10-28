@@ -20,28 +20,50 @@ function showSection(sectionId) {
   };
 
 
-const horaInicio = 19; // 7 PM (en formato 24h)
-const horaFin = 23;    // 11 PM (en formato 24h)
-
-
-const diasMostrar = [3, 4, 5, 6,7];
-
-function verificarHoraYDia() {
-    const ahora = new Date();
-    const horas = ahora.getHours();
-    const diaSemana = ahora.getDay();
-
-   
-    if (diasMostrar.includes(diaSemana) && horas >= horaInicio && horas <= horaFin) {
-        document.getElementById('Tacos').style.display = 'block'; 
-    } else {
-        document.getElementById('Tacos').style.display = 'none'; 
-    }
-}
-
-setInterval(verificarHoraYDia, 60000); 
-
-verificarHoraYDia();
+  const horaInicio = 19; // 7 PM (en formato 24h)
+  const horaFin = 23;    // 11 PM (en formato 24h)
+  
+  const diasMostrar = [3, 4, 5, 6, 0]; // Miércoles a Domingo (0 es Domingo)
+  
+  // Función para obtener la fecha y hora en CDMX
+  function obtenerFechaHoraCDMX() {
+      // Crear un objeto Date con la zona horaria de CDMX
+      const opciones = {
+          timeZone: 'America/Mexico_City',
+          hour: '2-digit',
+          hour12: false, // Formato 24h
+          weekday: 'numeric'
+      };
+  
+      const formatoHora = new Intl.DateTimeFormat('es-MX', opciones);
+      const ahoraCDMX = formatoHora.formatToParts(new Date());
+  
+      // Obtener las partes de la hora y el día de la semana
+      let horas = 0;
+      let diaSemana = 0;
+      ahoraCDMX.forEach(part => {
+          if (part.type === 'hour') horas = parseInt(part.value);
+          if (part.type === 'weekday') diaSemana = parseInt(part.value) - 1; // Restar 1 para que el domingo sea 0
+      });
+  
+      return { horas, diaSemana };
+  }
+  
+  function verificarHoraYDia() {
+      const { horas, diaSemana } = obtenerFechaHoraCDMX();
+  
+      if (diasMostrar.includes(diaSemana) && horas >= horaInicio && horas <= horaFin) {
+          document.getElementById('Tacos').style.display = 'block';
+      } else {
+          document.getElementById('Tacos').style.display = 'none';
+      }
+  }
+  
+  // Verificar cada minuto
+  setInterval(verificarHoraYDia, 60000); 
+  
+  // Verificar al cargar la página
+  verificarHoraYDia();
 
 
 

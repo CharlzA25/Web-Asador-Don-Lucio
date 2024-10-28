@@ -201,6 +201,8 @@ h3{
 
 }
 
+
+
 .ofert-1{
   flex-basis: 25%;
   
@@ -358,7 +360,12 @@ footer ul{
     background-color: var(--Background);
     display: none;
   }
+  .ofert-content h3{
+    font-size: 40px;
+    margin-top: -15px;
+  }
 
+  ofer
 /**/
 .menu .navbar ul li a:hover{
   color: var(--dorado);
