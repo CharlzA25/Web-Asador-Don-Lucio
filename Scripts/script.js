@@ -1,23 +1,29 @@
-// Función para mostrar la sección seleccionada y ocultar las demás
+
 function showSection(sectionId) {
-    // Ocultar todas las secciones
+    
     const sections = document.querySelectorAll('.food');
     sections.forEach(section => {
       section.classList.remove('activa');
     });
   
-    // Mostrar la sección seleccionada
+    
     const selectedSection = document.getElementById(sectionId);
     if (selectedSection) {
       selectedSection.classList.add('activa');
     }
   }
   
-  // Función para ocultar todas las secciones al cargar, excepto la sección por defecto
+  
   window.onload = function() {
-    const defaultSectionId = 'entradas'; // Cambia 'entradas' al id de la sección por defecto que deseas mostrar
-    showSection(defaultSectionId);
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const sectionId = urlParams.get('seccion');
+  
+    
+    const defaultSectionId = 'entradas'; 
+    showSection(sectionId ? sectionId : defaultSectionId);
   };
+  
 
 
   const horaInicio = 19; // 7 PM (en formato 24h)
@@ -25,9 +31,9 @@ function showSection(sectionId) {
   
   const diasMostrar = [3, 4, 5, 6, 0]; // Miércoles a Domingo (0 es Domingo)
   
-  // Función para obtener la fecha y hora en CDMX
+  
   function obtenerFechaHoraCDMX() {
-      // Crear un objeto Date con la zona horaria de CDMX
+      
       const opciones = {
           timeZone: 'America/Mexico_City',
           hour: '2-digit',

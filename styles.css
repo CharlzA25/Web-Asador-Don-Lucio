@@ -252,105 +252,142 @@ h3{
 
 
 /* Footer de la página */
+.element-footer h3,
+.element-footer h4,
+.element-footer h5 {
+  margin: 0; /* Eliminar margen predeterminado */
+  font-size: 18px; /* Tamaño de fuente uniforme */
+  color: #d8ba88;
+  line-height: 1.2; /* Ajuste de altura de línea para un espaciado uniforme */
+}
 
-footer{
+/* Ajuste de márgenes entre el encabezado y el contenido */
+.element-footer ul,
+.element-footer p {
+  margin-top: 10px; /* Añadir un margen superior uniforme */
+}
+
+/* Resto del CSS del footer */
+footer {
   background-color: #404140;
   color: var(--Secundary-c);
+  padding: 1rem 0;
 }
 
-footer ul{
+footer ul {
   padding: 0;
+  list-style: none;
 }
 
-.wrap-footer{
+.wrap-footer {
   display: grid;
   grid-template-columns: 25% 20% 20% 20%;
   column-gap: 5%;
   padding: 1rem;
   margin: 2rem auto;
   max-width: 1200px;
-  
 }
 
-.element-footer h5{
-  margin:  0;
-  color: #d8ba88;
-}
-
-.text-element-footer{
-  line-height: 2;
+.text-element-footer {
+  line-height: 1.8;
   color: #d8ba88;
   padding: 0;
 }
 
-.text-element-footer li a{
+.text-element-footer li a,
+.text-element-footer li {
   color: #d8ba88;
+  text-decoration: none;
 }
 
-.rrss-element-footer ul{
+.rrss-element-footer ul {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
 }
-.redesxd{
-  margin: 10px;
+
+.redesxd {
+  margin: 10px 0;
 }
-.rrss-element-footer img{
+
+.rrss-element-footer img {
   width: 45px;
+  transition: transform 0.3s ease;
 }
-.rrss-element-footer li{
+
+.rrss-element-footer img:hover {
+  transform: scale(1.1);
+}
+
+.rrss-element-footer li {
   margin-right: 1rem;
 }
 
-.footer-creds{
+.footer-creds {
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 1rem;
   color: #d8ba88;
-  font-size: .9rem;
+  font-size: 0.9rem;
   max-width: 1200px;
   margin: 0 auto;
 }
-.footer h3 {
-  color: #d8ba88;
-}
-.legal-creds ul{
+
+.legal-creds ul {
   display: flex;
+  padding: 0;
 }
 
-.legal-creds ul li{
+.legal-creds ul li {
   padding-right: 1rem;
 }
 
-.legal-creds ul li a{
+.legal-creds ul li a {
   color: #576171;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-@media (max-width:768px){
-  .wrap-footer{
-    grid-template-columns: repeat(2,1fr);
+.legal-creds ul li a:hover {
+  color: #d8ba88;
+}
+
+@media (max-width: 768px) {
+  .wrap-footer {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-creds {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
-@media (max-width:480px){
-  .wrap-footer{
-    grid-template-columns: repeat(1,1fr);
+@media (max-width: 480px) {
+  .wrap-footer {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
   }
 }
 
-@media (max-width:320px){
-  .footer-creds{
-    flex-flow: column;
+@media (max-width: 320px) {
+  .footer-creds {
+    flex-direction: column;
+    text-align: center;
   }
 }
-
 
 
 @media (max-width:991px){
   .menu{
     padding: 1px 15px;
+    z-index: 10;
   }
   .menu label{
     display: initial;
+    
   }
   .menu .navbar{
     position: absolute;
@@ -844,27 +881,45 @@ form > button:hover,
   width: 80%;
   margin: auto;
   display: flex;
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
   margin-top: 80px;
   padding: 10px;
   border-radius: 10px;
-  background-color: transparent;
-  box-shadow: 0px 0px 10px 0px #666;
-  justify-content: space-between; 
+  position: relative;
+  box-shadow: 0px 0px 10px 0px black;
+  justify-content: space-between;
+  overflow: hidden; 
+  
 }
 
+.contac-in::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 34, 34, 0.4); 
+  z-index: 1; 
+}
 .contac-maps {
   flex: 1; 
   height: auto;
   min-width: 300px; 
+  
 }
 
+.contac-maps, .contac-dat {
+  position: relative;
+  z-index: 2; /* Elevar el contenido por encima del fondo semitransparente */
+}
 .contac-dat {
   flex: 1; 
   text-align: center;
   min-width: 300px; 
   margin-top: auto;
   margin-bottom: auto;
+  font-family: var(--Texto);
 }
 
 .contac-dat h1 {
@@ -888,4 +943,26 @@ form > button:hover,
 .contac-dat p {
   width: 100%;
   color: #a3a3a3;
+}
+@media (max-width: 768px) {
+  .contac-in {
+    flex-direction: column; /* Cambia la dirección de los elementos a columna */
+  }
+
+  .contac-dat {
+    order: -1; /* Mueve los datos hacia arriba */
+  }
+  .contac-maps {
+    flex: 1; 
+    height: auto;
+    width: 100%; 
+}
+ /* Ajustar el iframe del mapa a la pantalla completa */
+ .contac-maps iframe {
+  width: 100%;
+  height: 200; /* Permitir que la altura se ajuste automáticamente */
+}
+.remod{
+  margin-bottom: 20px;
+}
 }
