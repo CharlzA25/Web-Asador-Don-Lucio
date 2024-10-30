@@ -715,7 +715,7 @@ form > button:hover,
   margin-bottom: 5px;
   display: block; 
   background-color: transparent;
-
+  transition: transform 0.3s ease;
 }
 
 .menu-seleccion button span {
@@ -724,7 +724,7 @@ form > button:hover,
 }
 
 .menu-seleccion button:hover {
-  background-color: #ddd;
+  background-color: #f1debb8e;
 }
 
 .Tacos{
@@ -984,4 +984,8 @@ form > button:hover,
 .remod{
   margin-bottom: 20px;
 }
+}
+
+.scroll-container button:hover{
+  transform: scale(1.2);
 }
