@@ -756,7 +756,7 @@ form > button:hover,
   padding: 30px 1px 30px 1px;
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(280px,1fr));
-  grid-gap: 30px 30px;
+  grid-gap: 30px 27px;
 }
 
 .food-items{
@@ -773,8 +773,33 @@ form > button:hover,
   width: 100%;
   border-radius: 15px 15px 0 0;
   max-height: 35vh;
-  
 }
+
+.menu3{
+  padding: 30px 1px 30px 1px;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(280px,1fr));
+  grid-gap: 30px 15px;
+}
+
+.food-items2{
+  display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin: 0 1px;
+}
+
+.food-items2 img{
+  position: relative;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  max-height: 35vh;
+  object-fit: scale-down
+}
+
+
 .details{
   padding:  20px 10px;
   display: grid;
@@ -796,7 +821,7 @@ form > button:hover,
 .price{
   text-align: right;
   color: var(--dorado);
-  font-family: var(--Titulos);
+  font-family: var(--Texto);
 }
 .details>p{
   font-family: var(--Texto);
@@ -849,6 +874,8 @@ form > button:hover,
   cursor: pointer;
   height: 10px;
 }
+
+
 
 /* Mostrar los botones en pantallas móviles */
 @media (max-width: 768px) {
