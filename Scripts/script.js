@@ -29,7 +29,7 @@ function showSection(sectionId) {
   const horaInicio = 19; // 7 PM (en formato 24h)
   const horaFin = 23;    // 11 PM (en formato 24h)
   
-  const diasMostrar = [3, 4, 5, 6, 0]; // Miércoles a Domingo (0 es Domingo)
+  const diasMostrar = [3, 4, 5, 6]; // Miércoles a Domingo (0 es Domingo)
   
   
   function obtenerFechaHoraCDMX() {
@@ -109,3 +109,13 @@ window.onload = mostrarSeccion;
 
 // Ejecutar la función cada vez que se cambie el hash de la URL
 window.onhashchange = mostrarSeccion;
+
+
+
+
+
+
+
+
+
+
