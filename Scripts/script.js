@@ -85,34 +85,6 @@ function scrollMenu(distance) {
 
 
 
-function mostrarSeccion() {
-    // Obtener el fragmento de la URL (por ejemplo, "#seccion2")
-    const seccionID = window.location.hash;
-
-    // Ocultar todas las secciones
-    const secciones = document.querySelectorAll('.seccion');
-    secciones.forEach(seccion => {
-        seccion.style.display = 'none';
-    });
-
-    // Mostrar solo la sección especificada por el ID de la URL
-    if (seccionID) {
-        const seccionMostrar = document.querySelector(seccionID);
-        if (seccionMostrar) {
-            seccionMostrar.style.display = 'block';
-        }
-    }
-}
-
-// Ejecutar la función al cargar la página
-window.onload = mostrarSeccion;
-
-// Ejecutar la función cada vez que se cambie el hash de la URL
-window.onhashchange = mostrarSeccion;
-
-
-
-
 
 
 
