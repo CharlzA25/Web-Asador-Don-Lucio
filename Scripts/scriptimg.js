@@ -59,10 +59,10 @@ function cambiarImagenMixologia() {
 }
 
 // Iniciar el cambio de imágenes cada 10 segundos para cada sección
-setInterval(cambiarImagenFuego, 10000);
-setInterval(cambiarImagenMar, 10000);
-setInterval(cambiarImagenAire, 10000);
-setInterval(cambiarImagenMixologia, 10000);
+setInterval(cambiarImagenFuego, 7000);
+setInterval(cambiarImagenMar, 7000);
+setInterval(cambiarImagenAire, 7000);
+setInterval(cambiarImagenMixologia, 7000);
 
 
 
