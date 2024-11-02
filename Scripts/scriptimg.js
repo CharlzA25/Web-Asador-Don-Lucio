@@ -20,7 +20,7 @@ const imagenesAire = [
 const imagenesMixologia = [
     { src: "./Menu/Bebida/Bebidas-Hígole.jpg", alt: "Imagen de Mixología 1" },
     { src: "./Menu/Bebida/Bebidas-La dolce far niente.jpg", alt: "Imagen de Mixología 2" },
-    { src: "./Menu/Bebida/Bebidas-Guanatos.jpg", alt: "Imagen de Mixología 3" }
+    { src: "./Menu/Bebida/SUPERSTYLIN.jpg", alt: "Imagen de Mixología 3" }
 ];
 
 // Variables para controlar el índice de cada imagen
