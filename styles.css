@@ -191,7 +191,7 @@ h3{
 
 .our2 {
   margin-top: -50px;
-  padding: 250px 0;
+  padding: 200px 0;
   background: linear-gradient(to bottom, rgb(0 0 0 / .50), rgb(0 0 0 / .3)), url(/Menu/Parrilla/Parrilla-Asador\ entero.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -1039,3 +1039,34 @@ form > button:hover,
 
 
 
+/*REserva*/
+
+.informationReser-content{
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  margin-top: -50px;
+  margin-bottom: 0px;
+}
+.informationReser-1{
+  flex-basis: 50%;
+}.informationReser2{
+  flex-basis: 50%;
+}
+.informationReser-c1{
+  padding: 45px;
+  text-align: center;
+  background-color: white;
+  height: 300px;
+}
+
+h3{
+  font-size: 40px;
+  font-family:var(--Titulos);
+  margin-bottom: 15px;
+  color: #404140;
+}
+.informationReser-a1 img{
+  height: 300px;
+  width: 100%;
+}
