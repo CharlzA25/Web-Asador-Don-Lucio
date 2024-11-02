@@ -116,6 +116,4 @@ window.onhashchange = mostrarSeccion;
 
 
 
-
-
-
+ 
