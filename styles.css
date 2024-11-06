@@ -1181,11 +1181,12 @@ form > button:hover,
 
   .icons2{
     display: inline-block;
+    cursor: pointer;
   }
   .icons2 img{
     width: 30px;;
   }
-  .header-menu3 .navbar1 active{
+  .header-menu3 .navbar1.active{
     top: 0;
   }
 
@@ -1273,4 +1274,191 @@ form > button:hover,
 }
 .home .content6 .btns{
   margin-left: 30px;
+}
+
+
+
+
+.abouts {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headtross {
+  text-align: center;
+  color: #af8740;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-size: 45px;
+  font-family: var(--Titulos);
+  background-color: #f4efe1;
+}
+
+.headtross span {
+  color: #202020;
+  text-transform: uppercase;
+  font-family: var(--Titulos);
+}
+
+.abouts .row {
+  display: flex;
+  align-items: center;
+  background: #F4EFE1;
+  flex-wrap: wrap;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+
+.abouts .row .imag {
+  flex: 1 1 60px;
+}
+
+.abouts .row .imag img {
+  width: 100%;
+}
+
+.abouts .row .contentab {
+  flex: 1 1 30px;
+  padding: 2rem;
+}
+
+.abouts .row .contentab h3 {
+  font-size: 30px;
+  color: #282828;
+  padding: 10px 0;
+  font-family: var(--Titulos);
+}
+
+.abouts .row .contentab p {
+  font-family: var(--Texto);
+}
+
+/* Media Query para pantallas de menos de 700px */
+@media (max-width: 760px) {
+  .abouts .row {
+    flex-direction: column; /* Coloca los elementos en columna */
+  }
+
+  .abouts .row .contentab {
+    order: 1; /* Hace que el contenido con h3 y p aparezca primero */
+    text-align: center;
+  }
+
+  .abouts .row .imag {
+    order: 2; /* La imagen aparece después del texto */
+  }
+}
+.segment2 {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.segment2 .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  gap: 1.5rem;
+}
+
+.segment2 .box-container .box {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.segment2 .box-container .box .imag {
+  height: 300px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.segment2 .box-container .box .imag img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.segment2 .box-container .box:hover .imag img {
+  transform: scale(1.1);
+}
+
+.segment2 .box-container .box .content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.segment2 .box-container .box .content p {
+  font-size: 15px;
+  font-family: var(--Texto);
+  color: var(--Background);
+  padding: 0.5rem;
+}
+
+.segment2 .box-container .box .content h4{
+  font-size: 25px;
+  font-family: var(--Texto);
+  color: var(--Background);
+  padding: 2px;
+}
+
+/* Media Query para pantallas menores a 700px */
+@media (max-width: 700px) {
+  .segment2 .box-container {
+    grid-template-columns: 1fr; /* Una columna para cada box */
+  }
+}
+
+.segment3 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
+              url(./Aboutus/Bebidas-La\ dolce\ far\ niente.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.segment3 .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  gap: 1.5rem;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.box {
+  backdrop-filter: blur(3px);
+}
+
+.segment3 .box-container .box {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.segment3 .box-container .box p {
+  font-size: 15px;
+  font-family: var(--Texto);
+  color: #c2bfbf;
+  padding: 0.5rem;
+}
+
+.segment3 .box-container .box h3 {
+  font-size: 25px;
+  font-family: var(--Titulos);
+  color: var(--BackSecundary);
+  padding: 5px;
+}
+
+.segment3 .box-container .box .s3 {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Media Query para pantallas menores a 700px */
+@media (max-width: 700px) {
+  .segment3 .box-container {
+    grid-template-columns: 1fr; /* Cambia a una sola columna */
+  }
 }
