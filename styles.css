@@ -536,7 +536,7 @@ footer ul {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  margin-top: 20px;
+  margin-top: 120px;
   width: 80%;
   max-width: 1000;
   z-index: 5;
@@ -962,6 +962,7 @@ form > button:hover,
   display: flex;
   flex-wrap: nowrap;
   margin-top: 80px;
+  margin-bottom: 0;
   padding: 10px;
   border-radius: 10px;
   position: relative;
@@ -1186,8 +1187,8 @@ form > button:hover,
   .icons2 img{
     width: 30px;;
   }
-  .header-menu3 .navbar1.active{
-    top: 0;
+  .header-menu3 .navbar1.active {
+    right: 0; /* Muestra el menú cuando se activa */
   }
 
 
@@ -1211,12 +1212,18 @@ form > button:hover,
     justify-content: center;
     text-align: center;
   }
+
+  .home1{
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+  }
   
   .home .content6 .h3{
     font-size: 2rem;
 
   }
-  
+
   .home .content6 p{
     font-size: .5rem;
     font-weight: lighter;
@@ -1226,6 +1233,9 @@ form > button:hover,
   }
 
 }
+
+
+
 
 .btns{
   margin: 1rem;
@@ -1277,7 +1287,7 @@ form > button:hover,
 }
 
 
-
+/*header fin*/
 
 .abouts {
   width: 90%;
@@ -1462,3 +1472,59 @@ form > button:hover,
     grid-template-columns: 1fr; /* Cambia a una sola columna */
   }
 }
+/*Header index*/
+
+.home1{
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(0 0 0 / .50),
+   rgb(0 0 0 / .3)), url(./backgrounds/Menú.gif) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home1 .contentin img{
+  height: 250px;
+  width: 250px;
+}  
+
+.contentin{
+  align-items: center;
+}
+
+.home1{
+  justify-content: center;
+  text-align: center;
+}
+/*Header Menú*/
+
+.home2{
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(0 0 0 / .50),
+   rgb(0 0 0 / .3)), url(./Menu/Parrilla/Parrilla-Asador\ entero.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home2 .contentin img{
+  height: 250px;
+  width: 250px;
+}  
+
+.contentin{
+  align-items: center;
+}
+
+.home2{
+  justify-content: center;
+  text-align: center;
+}
+
+.home2 h1{
+  margin-top: 30px;
+}
+
+/*Header Contacus*/
