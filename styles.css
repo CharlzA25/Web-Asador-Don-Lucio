@@ -123,6 +123,19 @@ img{
 }
 
 
+.header-menu2{
+  background: linear-gradient(to bottom, rgb(0 0 0 / .70), rgb(0 0 0 / .3)), url(./Menu/Parrilla/vacas-al-aire-libre-bienestar-animal.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  min-height: 60vh;
+  padding: 30px 0 0 0;
+}
+
+
+
 .information-content{
   display: flex;
   justify-content: space-between;
@@ -288,7 +301,7 @@ h3{
 
 /* Resto del CSS del footer */
 footer {
-  background-color: #404140;
+  background-color: #282828;
   color: var(--Secundary-c);
   padding: 1rem 0;
 }
@@ -1044,7 +1057,7 @@ form > button:hover,
 .informationReser-content{
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
   margin-top: -50px;
   margin-bottom: 0px;
 }
@@ -1054,13 +1067,30 @@ form > button:hover,
   flex-basis: 50%;
 }
 .informationReser-c1{
-  padding: 45px;
+  padding: 0;
+  margin-top: -70px;
+  margin-left: auto;
   text-align: center;
-  background-color: white;
-  height: 300px;
+  background-color: transparent;
+  height: 100px;
 }
 
-h3{
+.informationReser-c1 h3{
+  font-size: 40px;
+  font-family:var(--Titulos);
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.informationReser-c1 p{
+  font-size: 20px;
+  font-family:var(--Titulos);
+  margin-bottom: 15px;
+  color: #F4EFE1;
+}
+
+
+.h3{
   font-size: 40px;
   font-family:var(--Titulos);
   margin-bottom: 15px;
@@ -1079,13 +1109,13 @@ h3{
     margin-top: 0;
   }
   .our2{
-    margin-top: 0;
+    margin-top: -20px;
     padding: 150px 30px;
   
   }
   .informationReser2{
     padding-bottom: 1px;
-    background-color: #F4EFE1;
+    background-color: transparent;
   }
   .ofert-content{
     margin-top: 0;
@@ -1102,4 +1132,145 @@ h3{
     order: 2;
     margin-bottom: 25px;
   }
+}
+
+
+/*about us y prueba de header 2¨*/
+
+.header-menu3{
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 6%;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background-color: #202020;
+    opacity: .7;
+}
+
+.header-menu3 .logo img{
+  height: 3rem;
+  z-index: 10000;
+}
+
+.header-menu3 .navbar1 a{
+  margin: 0 1rem;
+  font-size: 1rem;
+  color: #F4EFE1;
+  z-index: 1000;
+}
+
+.header-menu3 .navbar1 a:hover{
+  color: #af8740;
+  border-bottom: .1rem solid #af8740;
+  padding-bottom: .5rem;
+}
+
+.icons2{
+  display: none;
+}
+@media (max-width: 968px){
+  .header-menu3{
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #202020;
+    background-color: #202020;
+    opacity: .95;
+  }
+
+  .icons2{
+    display: inline-block;
+  }
+  .icons2 img{
+    width: 30px;;
+  }
+  .header-menu3 .navbar1 active{
+    top: 0;
+  }
+
+
+  .header-menu3 .navbar1{
+    position: absolute;
+    top: 100%; right: -100%;
+    background: #282828;
+    width: 100%;
+    height: calc(1000vh - 9.5rem);
+  }
+  .header-menu3 .navbar1 a{
+    color: #F4EFE1;
+    display: block;
+    margin: 1.5rem;
+    padding: .5rem;
+    font-size: 1rem;
+  }
+
+  .home{
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .home .content6 .h3{
+    font-size: 2rem;
+
+  }
+  
+  .home .content6 p{
+    font-size: .5rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem;
+    color: #F4EFE1;
+  }
+
+}
+
+.btns{
+  margin: 1rem;
+  display: inline-block;
+  padding: .7rem  3rem;
+  font-size: 1.7rem;
+  color: #F4EFE1;
+  background-color: #af8740;
+  cursor: pointer;
+  font-family: var(--Texto);
+}
+
+.btns:hover{
+  letter-spacing: .2rem;
+}
+
+.home{
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(0 0 0 / .50),
+   rgb(0 0 0 / .3)), url(./Aboutus/vacas-al-aire-libre-bienestar-animal\ \(1\).png) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content6{
+  max-width: 50rem;
+}
+
+.home .content6 h3{
+  padding-left: 30px;
+  margin-top: 70px;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #cacaca;
+  font-family: var(--Titulos);
+}
+
+.home .content6 p{
+  padding-left: 30px;
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 1.8;
+  color: #F4EFE1;
+}
+.home .content6 .btns{
+  margin-left: 30px;
 }

@@ -82,21 +82,12 @@ function scrollMenu(distance) {
 
 
 
+
+
+
 function mostrarSeccion() {
     // Obtener el fragmento de la URL (por ejemplo, "#seccion2")
-    const hashSeccion = window.location.hash;
-    let seccionID;
-
-    // Revisar si existe un hash en la URL o si existe el parámetro `seccion`
-    if (hashSeccion) {
-        seccionID = hashSeccion;
-    } else {
-        const urlParams = new URLSearchParams(window.location.search);
-        const seccionParam = urlParams.get('seccion');
-        if (seccionParam) {
-            seccionID = `#${seccionParam}`;
-        }
-    }
+    const seccionID = window.location.hash;
 
     // Ocultar todas las secciones
     const secciones = document.querySelectorAll('.seccion');
@@ -104,7 +95,7 @@ function mostrarSeccion() {
         seccion.style.display = 'none';
     });
 
-    // Mostrar solo la sección especificada por el ID
+    // Mostrar solo la sección especificada por el ID de la URL
     if (seccionID) {
         const seccionMostrar = document.querySelector(seccionID);
         if (seccionMostrar) {
