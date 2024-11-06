@@ -1436,6 +1436,7 @@ form > button:hover,
 
 .box {
   backdrop-filter: blur(3px);
+  margin-top: 25px;
 }
 
 .segment3 .box-container .box {
