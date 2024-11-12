@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -40,6 +39,9 @@
             <button onclick="showSection('entradas')">
                 <img src="./iconos/Entradas.svg" alt="Entradas" class="icono"> Entradas
             </button>
+            <button onclick="showSection('sopas')">
+                <img src="./iconos/soup.svg" alt="Sopas" class="icono"> Sopas
+            </button>
             <button onclick="showSection('ensaladas')">
                 <img src="./iconos/Tierra.svg" alt="Ensaladas" class="icono"> Ensaladas
             </button>
@@ -64,6 +66,9 @@
             <button onclick="showSection('bebidas')">
               <img src="./iconos/Bebidas.svg" alt="bebidas" class="icono"> Bebidas
           </button>
+          <button onclick="showSection('cocteles')">
+            <img src="./iconos/coctail.svg" alt="Cocteles" class="icono"> Cocteles
+        </button>
             <button onclick="showSection('mixologia')">
                 <img src="./iconos/Mixiología.svg" alt="Bebidas" class="icono"> Mixología
             </button>
@@ -77,9 +82,9 @@
     </div>
   </div>
 
-       <section id="entradas" class="food container activa">
+<section id="entradas" class="food container activa">
         <h2>Entradas</h2>
-      <span>Para abrir el apetito</span>
+      <span class="span-menu">Para abrir el apetito</span>
 <div class="menu2">
     <div class="food-items">
         <img src="./Menu/Entrada/Entrada-Cassoulet de quesos.jpg" alt="">
@@ -239,7 +244,7 @@
        </div>
   </div>
 </div>
-  </section>
+</section>
 
   <section id="ensaladas" class="food container">
     <h2>Ensaladas</h2>
@@ -317,7 +322,7 @@
 
 <section id="cortes" class="food container">
     <h2>Cortes</h2>
-  <span>Asados con nuestra receta secreta</span>
+  <span span class="span-menu">Asados con nuestra receta secreta</span>
 <div class="menu2">
 <div class="food-items">
     <img src="./Menu/Cortes/Cortes-Rib eye asado.jpg" alt="">
@@ -558,7 +563,7 @@
 
 <section id="del-aire" class="food container">
 <h2>Del aire</h2>
-<span>Innovación de la gastronomía barroca</span>
+<h4>Innovación de la gastronomía barroca</h4>
 <div class="menu2">
 <div class="food-items">
 <img src="./Menu/Del aire/Del aire-Pechuga pollo con espinacas a la crema.jpg" alt="">
@@ -1124,6 +1129,64 @@
 </div>
 </section>
 
+<section id="menu-infantil" class="food container">
+    <h2>Menú infantil</h2>
+    <span>Nuestro menú para los niños</span>
+    <div class="menu2">
+    <div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Mini Arrachera (150 gr)</h5>
+            <h5 class="price">$177</h5>
+        </div>
+        <p>Con puré de papa, papas a la francesa
+            o verduras asadas.</p>
+    </div>
+    </div>
+    <div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Fettuccini al burro (150 gr)</h5>
+            <h5 class="price">$154</h5>
+        </div>
+        <p>Con fajitas de pollo.</p>
+    </div>
+    </div>
+    <div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Quesadillas de queso (2 pz)</h5>
+            <h5 class="price">$135</h5>
+        </div>
+        <p>Con puré de papa, papas a la francesa
+            o verduras asadas.</p>
+    </div>
+    </div>
+    <div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Milanesa de pollo</h5>
+            <h5 class="price">$165</h5>
+        </div>
+        <p>Con puré de papa, papas a la francesa
+            o verduras asadas.</p>
+    </div>
+    </div>
+    <div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Dedos de queso (4 pz)</h5>
+            <h5 class="price">$80</h5>
+        </div>
+    </div>
+    </div>
+    </section>
+
 
 <div id="Tacos">
 <section id="tacos" class="food container">
@@ -1251,6 +1314,1209 @@
       <li><a href="menú.html">Menú</a></li>
       <li><a href="contactanos.html">Contáctanos</a></li>
       <li><a href="About-us.html">Sobre nosotros</a></li>
+    </ul>
+    </div>
+
+    <div class="rrss-element-footer element-footer">
+      <h5>Redes sociales</h5>
+      <ul class="redesxd">
+      <li><a href="https://www.facebook.com/share/2xBdsaFrjBSfQDxv/?mibextid=kFxxJD" target="_blank"><img src="./iconos/facebook.png" alt="Facebook"></a></li>
+      <li><a href="https://www.instagram.com/asadordonlucio?igsh=NGNkMnJxN2FvamI3" target="_blank"><img src="./iconos/instagram.png" alt="Instagram"></a></li>
+      <li><a href="https://wa.me/522222036090?text=Hola, me gustaría información para reservar" target="_blank"><img src="./iconos/social.png" alt="Whatsapp"></a></li>
+      </ul>
+    </div>
+
+   </div>
+   <div class="footer-creds">
+    <div class="copy-creds">
+      <p>©Carlos A.2024 • Todos los derechos reservados</p>
+     </div>
+     <div class="legal-creds">
+      <ul>
+        <li><a href=""></a>Política de privacidad</li>
+        <li><a href=""></a>Aviso legal</li>
+        <li><a href=""></a>Terminos y condiciones</li>
+      </ul>
+    </div>
+
+    </div>
+  </footer>
+      <script src="./Scripts/script.js"></script>
+      <script src="./Scripts/scriptnav.js"></script>
+</body>
+</html>
+
+       <section id="entradas" class="food container activa">
+        <h2>Entradas</h2>
+      <span>Nuestras entradas</span>
+<div class="menu2">
+    <div class="food-items">
+        <img src="./Menu/Entrada/Entrada-Cassoulet de quesos.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description"> Cassoulet natural (250g)</h5>
+                <h5 class="price">$235</h5>
+            </div>
+            <p>Mezcla de quesos con sabor suave acompañados de cebolla morada y
+                romero, todo al vino tinto. Tortillas nixtamalizadas hechas a mano para
+                servir.</p>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="./Menu/Entrada/Entrada-Camembert con mermelada de cebolla3.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description"> Camembert con mermelada de tocino y cebolla (250g)</h5>
+                <h5 class="price">$293</h5>
+            </div>
+            <p>Delicioso queso camembert al horno de leña acompañado de una
+                mermelada hecha con cebolla caramelizada, virutas de tocino ahumado
+                y miel con perfume de café de altura.</p>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="./Menu/Entrada/Entrada-Aguachile de Rib eye.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description"> Aguachile negro de Rib eye (150g de carne)</h5>
+                <h5 class="price">$314</h5>
+            </div>
+            <p>Fajitas de Rib eye a término medio ahogadas en una salsa negra tatemada
+                de chiles y limón, con rodajas de pepino, jitomates cherry y aguacate.</p>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="./Menu/Entrada/Aguachile de camarón 3.png" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description">Aguachile negro de camarón y pulpo (150g de frutos del mar)</h5>
+                <h5 class="price">$255</h5>
+            </div>
+            <p>Camarones abiertos en mariposa con rodajas de pulpo pasados a la parrilla
+                ahogadas en una salsa negra tatemada de chiles y limón, con rodajas de
+                pepino, jitomates cherry y aguacate.</p>
+            
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="./Menu/Entrada/Entrada-Guacamole2.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description">Guacamole con totopos (250g)</h5>
+                <h5 class="price">$124</h5>
+            </div>
+            <p>Combinación de la casa hecha de cremosos aguacates de Michoacán,
+                jitomate, cilantro, aceite de oliva y limón sazonada con sal artesanal.</p>
+        </div>
+    </div>
+    <div class="food-items">
+        <img src="./Menu/Entrada/Entrada-Tacos de camarón.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description">Tacos (3) de camarón en tempura (130g)</h5>
+                <h5 class="price">$212</h5>
+            </div>
+            <p>Camarones en tortilla de harina cubiertos en tempura de maíz con chucrut
+                de col morada aderezados con mayonesa al chipotle adobado
+                acompañado de limón eureka asado.</p>
+        </div>
+    </div>
+
+    <div class="food-items">
+        <img src="./Menu/Entrada/Verduras a la parrilla2.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description">Parrillada de verduras y tubérculo (400g)</h5>
+                <h5 class="price">$181</h5>
+            </div>
+            <p>Calabacitas, nopal, pimiento morrón, berenjena, cebolla morada, jitomate
+                cherry añejo y camote. Todo a la parrilla y sazonadas con aceite de oliva y
+                sal artesanal.</p>
+        </div>
+    </div>
+</div>
+       </div>
+  </div>
+</div>
+
+
+<span>Nuestras sopas</span>
+<div class="menu3">
+    <div class="food-items2">
+        <img src="./Menu/Sopas/Sopas-Jugo de carne4.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description">Jugo de carne (280 ml)</h5>
+                <h5 class="price">$198</h5>
+            </div>
+            <p>3 wontons rellenos de cola de res
+                deshebrada bañados en jugo de carne
+                hecho con el método artesanal;
+                eligiendo las partes de la res con mayor
+                personalidad, selladas y cocidas a
+                fuego lento para garantizar el mejor
+                sabor.</p>
+        </div>
+    </div>
+    <div class="food-items2">
+        <img src="./Menu/Sopas/Sopas-Crema de quesillo3.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description">Crema de quesillo (280 ml)</h5>
+                <h5 class="price">$151</h5>
+            </div>
+            <p> Propuesta suave y cremosa que
+                modifica la estructura del quesillo
+                para resaltar sus mejores notas
+                con polvo de nuez como
+                antagonista del platillo.</p>
+        </div>
+    </div>
+    <div class="food-items2">
+        <img src="./Menu/Sopas/Sopas-Crema de coliflor.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description"> Crema de coliflor (280 ml)</h5>
+                <h5 class="price">$152</h5>
+            </div>
+            <p>Usamos a la coliflor asada y
+                ahumada como protagonista de
+                esta crema servida con nueces
+                de la india enmarcadas por un
+                croúte de hojaldre.</p>
+        </div>
+    </div>
+    <div class="food-items2">
+        <img src="./Menu/Sopas/Sopas-Bisque de camarón.jpg" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description"> Bisque de camarón con
+                    espuma de vainilla (280 ml)</h5>
+                <h5 class="price">$169</h5>
+            </div>
+            <p>Reinterpretación contemporánea a
+                base de camarón fresco enriquecido
+                con un toque de brandy, tomate y
+                hierbas aromáticas con una suave
+                espuma de vainilla para enmarcar los
+                sabores cítricos.</p>
+            
+        </div>
+    </div>
+   
+</div>
+       </div>
+  </div>
+</div>
+  </section>
+
+  <section id="ensaladas" class="food container">
+    <h2>Ensaladas</h2>
+  <span>Nuestras Ensaladas</span>
+<div class="menu2">
+<div class="food-items">
+    <img src="./Menu/Ensaladas/Ensalada César3.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Ensalada César al grill (270g)</h5>
+            <h5 class="price">$176</h5>
+        </div>
+        <p>La clásica César (lechuga, croutones, parmesano y salsa cremosa) con las
+            hojas de lechuga pasadas por la parrilla y ahumadas, resaltando la
+            untuosidad de la salsa y brindándole acento a los ya clásicos sabores.</p>
+    </div>
+</div>
+<div class="food-items">    
+    <img src="./Menu/Ensaladas/Ensalada de arúgula y fruta.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Ensalada de arúgula y fruta (270g)</h5>
+            <h5 class="price">$163</h5>
+        </div>
+        <p>Mezcla de hojas de arúgula ligeramente ahumadas acompañadas de kiwi,
+            queso crema, brotes frescos de amaranto, almendras garapiñadas con una
+            vinagreta dulce de mamey contrastado con una ligera acidez del rábano
+            sandía.</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Ensaladas/Ensalada de verdolagas al vino tinto4.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Ensalada de verdolagas al vino tinto (280g)</h5>
+            <h5 class="price">$167</h5>
+        </div>
+        <p> Cruditté de verdolagas con cremoso aguacate de Michoacán, nuez
+            caramelizada, jitomates cherrys añejos y albahaca con una vinagreta de vino
+            tinto con el queso Cotija como equilibrio.</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Ensaladas/Ensalada de hojas verdes con vinagreta de maracuyá3.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Ensalada de hojas verdes con vinagreta de maracuyá (270g)</h5>
+            <h5 class="price">$174</h5>
+        </div>
+        <p> Mezcla de arúgula, lechugas, radicchio y espinacas como escolta de fresa,
+            manzana verde a la parrilla, arándano, brotes de amaranto con nuez y queso
+            de cabra ceniza ligados con una fresquísima vinagreta de maracuyá.</p>
+    </div>
+</div>
+
+<div class="food-items">
+    <img src="./Menu/Ensaladas/" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description"> Ensalada de corazón de girasol (230g)</h5>
+            <h5 class="price">$229</h5>
+        </div>
+        <p>  Tierno corazón de girasol asado lentamente a la parrilla para extraer los
+            mejores sabores, acompañado de lechuga, arúgula y espinacas, jitomates
+            cherry añejos, queso feta y nueces ligados con una vinagreta de miel y
+            limón</p>
+    </div>
+</div>
+
+</div>
+
+   </div>
+</div>
+</section>
+
+<section id="cortes" class="food container">
+    <h2>Cortes</h2>
+  <span>Prueba nuestros cortes</span>
+<div class="menu2">
+<div class="food-items">
+    <img src="./Menu/Cortes/Cortes-Rib eye asado.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Rib Eye (400g)</h5>
+            <h5 class="price">$691</h5>
+        </div>
+        <p>Corte rey de la parrilla, uno de los preferidos de los verdaderos amantes de la
+            carne gracias a su intenso marmoleo. Barnizado con nuestra receta única de
+            mantequilla de res brinda una experiencia excepcional resaltando todas las
+            notas de la res.</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Cortes/Cortes-T Bone.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">T-Bone (400g)</h5>
+            <h5 class="price">$510</h5>
+        </div>
+        <p> Exquisita combinación de dos cortes en un solo plato. Por un lado nos
+            presenta el tierno y magro filete de solomillo y por el otro, el rico y veteado
+            lomo de res separado por un hueso en forma de T que agrega sabor y
+            personalidad.</p>
+    </div>
+</div>
+<div class="food-items">    
+    <img src="./Menu/Cortes/Cortes-Arrachera.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Arrachera (250g)</h5>
+            <h5 class="price">$341</h5>
+        </div>
+        <p>Esta jugosa opción es famosa por su suave textura y muy popular por el
+            intenso sabor añadido por la maceración que posee. </p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Cortes/Cortes-Filete.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Filete (300g)</h5>
+            <h5 class="price">$473</h5>
+        </div>
+        <p>Elección predilecta para aquellos que gustan de un corte magro. Toda la
+            suavidad y sabor en un corte con muy poca grasa.</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Cortes/Cortes-Cowboy.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5> Rib Eye con hueso (Cowboy) (400g)</h5>
+            <h5 class="price">$647</h5>
+        </div>
+        <p>En este corte contamos con todas las bonanzas del rib eye con el añadido
+            del hueso costillar. Sabor único gracias al marmoleo intenso y el barniz de
+            nuestra receta única de mantequilla de res. Un best seller de cualquier
+            parrilla.</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Cortes/Cortes-Entraña.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Entraña (300g)</h5>
+            <h5 class="price">$435</h5>
+        </div>
+        <p> Disfruta de todo el sabor de la carne en un corte con un marmoleo mucho
+            más acentuado y un sabor amplificado al doble, manteniendo la misma
+            jugosidad en un corte difícil de encontrar en otros lugares. Si tienes una
+            mandíbula fuerte esta es una excelente opción.</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Cortes/Cortes-Costilla de res 24hrs.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Costilla con cocción lenta hasta de 24 horas (400g)</h5>
+            <h5 class="price">$524</h5>
+        </div>
+        <p> Una de las partes con más sabor y ternura la encontramos en las costillas,
+            que reposamos cuidadosamente con especies y cocemos durante 24 horas
+            en un horno de leña a temperaturas bajas. Este proceso nos da una textura
+            y suavidad sin comparación.</p>
+         </div>
+     </div>
+</div>
+
+   </div>
+</div>
+</section>
+
+<section id="guarniciones" class="food container">
+    <h2>Guarniciones</h2>
+  <span>Nuestras guarniciones</span>
+<div class="menu2">
+<div class="food-items">
+    <img src="./Menu/Guarniciones/Guarniciones-Lechugas a la parrilla.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description"> Hojas de lechuga ahumada con
+                mojo tatemado (150g)</h5>
+            <h5 class="price">$65</h5>
+        </div>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Guarniciones/Verduras a la parrilla.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Parrillada de vegetales (150g)</h5>
+            <h5 class="price">$65</h5>
+        </div>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Entrada/Entrada-Guacamole2.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Guacamole (150 g)</h5>
+            <h5 class="price">$65</h5>
+        </div>
+    </div>
+</div>
+
+<div class="food-items">
+    <img src="./Menu/Entrada/" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Espinacas a la crema con raja de
+                pimiento asado (150g)</h5>
+            <h5 class="price">$65</h5>
+        </div>
+    </div>
+</div>
+
+<div class="food-items">
+    <img src="./Menu/Entrada/" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Puré de papa (150g)</h5>
+            <h5 class="price">$65</h5>
+        </div>
+    </div>
+</div>
+
+<div class="food-items">
+    <img src="./Menu/Entrada/" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Papas a la francesa (150g)</h5>
+            <h5 class="price">$65</h5>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>
+
+   </div>
+</div>
+</section>
+
+<section id="del-mar" class="food container">   
+<h2>Del mar</h2>
+<span>Nuestros Mariscos</span>
+<div class="menu2">
+<div class="food-items">
+<img src="./Menu/Del mar/Pulpo a la gallega.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Pulpo a la gallega (350 g)</h5>
+        <h5 class="price">$426</h5>
+    </div>
+    <p>Mismo proceso que el pulpo con chimichurri sobre una base de papas
+        cocidas, asadas y fritas aderezadas con aceite de oliva, paprika y sal
+        artesanal. Flameado con mezcal de la casa.</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Menu/Del mar/Del mar-Salmón con salsa de mantequilla y naranja con puré de camote con piña6.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Salmón en salsa de naranja con puré de camote (250g)</h5>
+        <h5 class="price">$392</h5>
+    </div>
+    <p> Filete de salmón sobre un espejo de camembert y salsa a la naranja
+        contrastada de una mermelada de camote y piña asada con guarnición de
+        zanahorias babies policromáticas.</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Menu/Del mar/Del mar-Salmón con verduras.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5> Salmón con verduras asadas (250 g)</h5>
+        <h5 class="price">$358</h5>
+    </div>
+    <p>Opción magra y fresca para todo aquel quien guste de sabores con perfil
+        suave y bien definido.</p>
+</div>
+</div>
+
+<div class="food-items">
+    <img src="./Menu/Del mar/Fettuccine Frutti di mare.jpeg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">  Fettuccine a la marinera (150g de frutos del mar)</h5>
+            <h5 class="price">$415</h5>
+        </div>
+        <p> Tiernos fettuccinis sancochados en aceite de oliva entrelazados con
+            mejillones, camarones y pulpo sazonados en vino blanco, caldo de mariscos
+            y mantequilla. Todo enmarcado en una salsa de jitomate por la parrilla a las
+            hierbas aromáticas con parmesano rallado en el tope.</p>
+    </div>
+    </div>
+
+<div class="food-items">
+<img src="./Menu/Del mar/Del mar-Pulpo con verduras.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">  Pulpo a las brasas con chimichurri (350g)</h5>
+        <h5 class="price">$410</h5>
+    </div>
+    <p> A través de un proceso artesanal masajeamos a nuestro pulpo con una
+        mezcla de ingredientes para que tenga la mayor ternura y jugosidad, lo pre
+        cocemos en un caldo condimentado y lo asamos a la parrilla para
+        acompañarlo con chimichurri.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="del-aire" class="food container">
+<h2>Del aire</h2>
+<span>Nuestras aves</span>
+<div class="menu2">
+<div class="food-items">
+<img src="./Menu/Del aire/Del aire-Pechuga pollo con espinacas a la crema.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Pechuga asada con espinacas a la crema (250g)</h5>
+        <h5 class="price">$315</h5>
+    </div>
+    <p>Jugosa pechuga sobre un espejo de espinacas a la crema ribeteado de
+        rajas de pimiento morrón con nueces.</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Menu/Del aire/Del aire-Pechuga pollo con mermelada cebolla y puré d camote con piña.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description"> Pechuga con mermelada de tocino y cebolla (250g)</h5>
+        <h5 class="price">$315</h5>
+    </div>
+    <p> El sabor de la miel y el café realzan a la perfección a la cebolla caramelizada
+        y las virutas de tocino para contrastarlas con una rebanada de camembert.</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Menu/Del aire/Del aire-Pechuga pollo en pipián de melón.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Pechuga en pipián de melón (250g)</h5>
+        <h5 class="price">$397</h5>
+    </div>
+    <p>Creación barroca con una reinterpretación frutal y fresca. Este platillo nos brinda
+        una primera impresión a pipián pero con un retrogusto con el dulce sabor a
+        melón. Lo acompañamos de queso de cabra para un mejor equilibrio y mayor
+        suavidad en paladar.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="postres" class="food container">
+    <h2>Postres</h2>
+  <span>Nuestros postres</span>
+<div class="menu2">
+<div class="food-items">
+    <img src="./Menu/Postres/Postres-Cheese cake guayaba.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description"> Pie de queso con ate de
+                guayaba (150g)</h5>
+            <h5 class="price">$161</h5>
+        </div>
+        <p> Pie de queso con ate de
+            guayaba encima, contrastando
+            acidez y sedosidad en un mismo
+            bocado.</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Postres/Postres-Crème brûlée.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">  Crème brûleé a la vainilla
+                (130 g)</h5>
+            <h5 class="price">$120</h5>
+        </div>
+        <p>Clásico postre francés, resaltado con notas de vainilla en una costra de caramelo.</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Postres/Postres-Molten de chocolate.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description"> Molten de chocolate (150g)</h5>
+            <h5 class="price">$136</h5>
+        </div>
+        <p> Exterior esponjoso que
+            esconde un interior suave de
+            chocolate fundido
+            acompañado de helado de
+            vainilla.</p>
+    </div>
+</div>
+<div class="food-items">
+    <img src="./Menu/Postres/Postres-Sorbete pepino, limón y hierbabuena.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Nieve Limón-pepino
+                hierbabuena,  Jamaica
+                Romero y Frutos Rojos</h5>
+            <h5 class="price">$89</h5>
+        </div>
+    </div>
+</div>
+
+<div class="food-items">
+    <img src="./Menu/Postres/Postres-Sorbete pepino, limón y hierbabuena.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Cheesecake con crumble
+                de manzana (150 g)</h5>
+            <h5 class="price">$161</h5>
+        </div>
+        <p> Postre clásico llevado a la
+            perfección con un crumble
+            de manzana, azúcar y canela.</p>
+    </div>
+</div>
+
+<div class="food-items2">
+    <img src="./Menu/Postres/AFOGATO.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Affogato</h5>
+            <h5 class="price">$144</h5>
+        </div>
+        <p>El preferido de los italianos,
+            una bola de helado bañado
+            en expresso.</p>
+    </div>
+</div>
+
+<div class="food-items">
+    <img src="./Menu/Postres/Selva negra1.jpg" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description"> Helado de vainilla o Selva
+                Negra  y Huevo Kinder</h5>
+            <h5 class="price">$99</h5>
+        </div>
+    </div>
+</div>
+
+</div>
+</section>
+
+<section id="bebidas" class="food container">
+<h2>Bebidas</h2>
+<span>Bebidas frías</span>
+<div class="menu2">
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Coca, Fanta, Fresca, Sidral</h5>
+        <h5 class="price">$45</h5>
+    </div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description"> Coca Zero y Coca  Ligth</h5>
+        <h5 class="price">$55</h5>
+    </div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description"> Topo Chico</h5>
+        <h5 class="price">$45</h5>
+    </div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description"> Perrier</h5>
+        <h5 class="price">$75</h5>
+    </div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Agua santa María</h5>
+        <h5 class="price">$45</h5>
+    </div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description"> Naranjada/Limonada</h5>
+        <h5 class="price">$45</h5>
+    </div>
+</div>
+</div>
+
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description"> Jarra Naranjada/Limonada</h5>
+            <h5 class="price">$215</h5>
+        </div>
+    </div>
+    </div>
+
+    <div class="food-items">
+        <img src="./Assets/Carne2.png" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description"> Sangría</h5>
+                <h5 class="price">$115</h5>
+            </div>
+        </div>
+        </div>
+
+        <div class="food-items">
+            <img src="./Assets/Carne2.png" alt="">
+            <div class="details">
+                <div class="details-sub">
+                    <h5 class="description"> Jarra Sangría</h5>
+                    <h5 class="price">$349</h5>
+                </div>
+            </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./Assets/Carne2.png" alt="">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5 class="description"> Carajillo</h5>
+                        <h5 class="price">$145</h5>
+                    </div>
+                </div>
+                </div>
+
+                <div class="food-items">
+                    <img src="./Assets/Carne2.png" alt="">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5 class="description">  Negra Modelo</h5>
+                            <h5 class="price">$65</h5>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="food-items">
+                        <img src="./Assets/Carne2.png" alt="">
+                        <div class="details">
+                            <div class="details-sub">
+                                <h5 class="description"> Modelo Especial</h5>
+                                <h5 class="price">$65</h5>
+                            </div>
+                        </div>
+                        </div>
+
+                        <div class="food-items">
+                            <img src="./Assets/Carne2.png" alt="">
+                            <div class="details">
+                                <div class="details-sub">
+                                    <h5 class="description">  Pacífico, Corona, Victoria</h5>
+                                    <h5 class="price">$55</h5>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="food-items">
+                                <img src="./Assets/Carne2.png" alt="">
+                                <div class="details">
+                                    <div class="details-sub">
+                                        <h5 class="description">  Stella y Ultra</h5>
+                                        <h5 class="price">$65</h5>
+                                    </div>
+                                </div>
+                                </div>
+
+                                <div class="food-items">
+                                    <img src="./Assets/Carne2.png" alt="">
+                                    <div class="details">
+                                        <div class="details-sub">
+                                            <h5 class="description"> Guinness</h5>
+                                            <h5 class="price">$155</h5>
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="food-items">
+                                        <img src="./Assets/Carne2.png" alt="">
+                                        <div class="details">
+                                            <div class="details-sub">
+                                                <h5 class="description">  Cerveza sin Alcohol</h5>
+                                                <h5 class="price">$55</h5>
+                                            </div>
+                                        </div>
+                                        </div>
+
+
+
+</div>
+
+
+
+
+    <span>Bebidas calientes</span>
+<div class="menu2">
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Espresso</h5>
+        <h5 class="price">$45</h5>
+    </div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description"> Americano</h5>
+        <h5 class="price">$45</h5>
+    </div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description"> Macchiato</h5>
+        <h5 class="price">$55</h5>
+    </div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description"> Cappuccino</h5>
+        <h5 class="price">$60</h5>
+    </div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Ristretto</h5>
+        <h5 class="price">$55</h5>
+    </div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">  Té Matcha</h5>
+        <h5 class="price">$45</h5>
+    </div>
+</div>
+</div>
+
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+        <div class="details-sub">
+            <h5 class="description">  Té Chai</h5>
+            <h5 class="price">$45</h5>
+        </div>
+    </div>
+    </div>
+    <div class="food-items">
+        <img src="./Assets/Carne2.png" alt="">
+        <div class="details">
+            <div class="details-sub">
+                <h5 class="description">  Latte</h5>
+                <h5 class="price">$65</h5>
+            </div>
+        </div>
+        </div>
+        <div class="food-items">
+            <img src="./Assets/Carne2.png" alt="">
+            <div class="details">
+                <div class="details-sub">
+                    <h5 class="description">  Infusión de manzanilla y Anís</h5>
+                    <h5 class="price">$55</h5>
+                </div>
+            </div>
+            </div>
+            <div class="food-items">
+                <img src="./Assets/Carne2.png" alt="">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5 class="description">   Infusión de Frutos rojos</h5>
+                        <h5 class="price">$55</h5>
+                    </div>
+                </div>
+                </div>
+                <div class="food-items">
+                    <img src="./Assets/Carne2.png" alt="">
+                    <div class="details">
+                        <div class="details-sub">
+                            <h5 class="description">   Infusión de Canelón y Miel</h5>
+                            <h5 class="price">$55</h5>
+                        </div>
+                    </div>
+                    </div>
+
+
+
+
+
+</div>
+
+</section>
+
+<section id="mixologia" class="food container">
+<h2>Mixologia</h2>
+<span>Nuestra mixología</span>
+<div class="menu3">
+<div class="food-items2">
+<img src="./Menu/Bebida/Bebidas-Superstylin.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Super Stylin</h5>
+        <h5 class="price">$149</h5>
+    </div>
+    <p>Mediante métodos artesanales extraemos las
+        mejores notas de la fresa, zarzamora, blueberry
+        y lychee para integrarlas con ginebra y licor de
+        moras silvestres obteniendo una bebida
+        equilibrada y refrescante.</p>
+</div>
+</div>
+<div class="food-items2">
+<img src="./Menu/Bebida/Bebidas-Saudade Tlaoli.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Saudaghi Tlaoli</h5>
+        <h5 class="price">$149</h5>
+    </div>
+    <p>La nostalgia del maíz nos lleva a ofrecer este
+        trago lleno de tradición, raíces y recuerdos a
+        través de licor de elote, mezcal espadín, whisky
+        de piña junto con las notas cítricas de kiwi,
+        escarchado en polvo de chinicuil y jalapeño.
+        </p>
+    </div>
+</div>
+<div class="food-items2">
+<img src="./Menu/Bebida/Bebidas-Guanatos.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Guanatos ¡sí señor!</h5>
+        <h5 class="price">$149</h5>
+    </div>
+    <p>Acunado en la mismísima tierra del azul tequilana
+        weber, les traemos nuestra mezcla con su
+        destilado cristalino, Licor 43, Cordial de cereza
+        negra y Prosseco para disfrutar esta única
+        mezcla de texturas.</p>
+</div>
+</div>
+<div class="food-items2">
+<img src="./Menu/Bebida/Bebidas-GRAPE.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Grape cucuy</h5>
+        <h5 class="price">$149</h5>
+    </div>
+    <p>A través de una lenta transformación al vacío
+        descubrimos un perfil poco conocido del melón.
+        Tomamos este nuevo sabor para combinarlo
+        con Ajenjo, Cognac, Vino blanco fortificado,
+        Prosseco y redondeamos con nuestro líbido de
+        maíz.
+        </p>
+</div>
+</div>
+<div class="food-items2">
+<img src="./Menu/Bebida/Bebidas-La dolce far niente.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">La Dolce Far Niente</h5>
+        <h5 class="price">$149</h5>
+    </div>
+    <p>Sin perder la intensidad del tradicional expresso
+        martini les presentamos nuestra interpretación
+        acentuando los sabores recomfortantes de
+        nuestro café veracruzano, bourbon, licor de
+        cacao y avellana.</p>
+</div>
+</div>
+<div class="food-items2">
+<img src="./Menu/Bebida/Bebidas-Hígole.jpg" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Hígole</h5>
+        <h5 class="price">$149</h5>
+    </div>
+    <p>Deja que te cuente como el higo, el limón
+        Eureka, la miel multifloral y el ron añejo se unen
+        en una bebida llena de dulces sorbos rematada
+        con una espuma de piña y coco.
+        </p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="menu-infantil" class="food container">
+<h2>Menú infantil</h2>
+<span>Nuestro menú para los niños</span>
+<div class="menu2">
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Mini Arrachera (150 gr)</h5>
+        <h5 class="price">$177</h5>
+    </div>
+    <p>Con puré de papa, papas a la francesa
+        o verduras asadas.</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Fettuccini al burro (150 gr)</h5>
+        <h5 class="price">$154</h5>
+    </div>
+    <p>Con fajitas de pollo.</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Quesadillas de queso (2 pz)</h5>
+        <h5 class="price">$135</h5>
+    </div>
+    <p>Con puré de papa, papas a la francesa
+        o verduras asadas.</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Milanesa de pollo</h5>
+        <h5 class="price">$165</h5>
+    </div>
+    <p>Con puré de papa, papas a la francesa
+        o verduras asadas.</p>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+    <div class="details-sub">
+        <h5 class="description">Dedos de queso (4 pz)</h5>
+        <h5 class="price">$80</h5>
+    </div>
+</div>
+</div>
+</section>
+
+
+<div id="Tacos">
+<section id="tacos" class="food container">
+<h2>Tacos</h2>
+<span>Nuestros tacos</span>
+<div class="menu3">
+<div class="food-items">
+<img src="./Menu/Tacos/Tacos-Taco carne asada3.jpg" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5 class="description">Taco de carne asada (35g)</h5>
+    <h5 class="price">$49</h5>
+</div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Menu/Tacos/Tacos-Taco chistorra2.jpg" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5 class="description">Taco de chistorra (35g)</h5>
+    <h5 class="price">$49</h5>
+</div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Menu/Tacos/a" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5 class="description">Taco de arrachera (35g)</h5>
+    <h5 class="price">$49</h5>
+</div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Menu/Tacos/Tacos-Taco asado y chistorra.jpg" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5 class="description">Taco combinado (35g)</h5>
+    <h5 class="price">$49</h5>
+</div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Assets/Carne2.png" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5 class="description">Quesadilla (35g)</h5>
+    <h5 class="price">$49</h5>
+</div>
+</div>
+</div>
+<div class="food-items">
+<img src="./Menu/Tacos/Tacos-Quesadilla de carne.jpg" alt="">
+<div class="details">
+<div class="details-sub">
+    <h5 class="description">Quesadilla + carne (70g)</h5>
+    <h5 class="price">$89</h5>
+</div>
+</div>
+</div>
+
+<div class="food-items">
+    <img src="./Assets/Carne2.png" alt="">
+    <div class="details">
+    <div class="details-sub">
+        <h5 class="description">Volcán (35g)</h5>
+        <h5 class="price">$49</h5>
+    </div>
+    </div>
+    </div>
+    <div class="food-items">
+        <img src="./Assets/Carne2.png" alt="">
+        <div class="details">
+        <div class="details-sub">
+            <h5 class="description">Volcán + carne (70g)</h5>
+            <h5 class="price">$89</h5>
+        </div>
+        </div>
+        </div>
+
+        <div class="food-items">
+            <img src="./Assets/Carne2.png" alt="">
+            <div class="details">
+            <div class="details-sub">
+                <h5 class="description">Mulita (35g)</h5>
+                <h5 class="price">$57</h5>
+            </div>
+            </div>
+            </div>
+
+            <div class="food-items">
+                <img src="./Menu/Tacos/Tacos-Mulita carne asada.jpg" alt="">
+                <div class="details">
+                <div class="details-sub">
+                    <h5 class="description">Mulita + carne (70g)</h5>
+                    <h5 class="price">$97</h5>
+                </div>
+                </div>
+                </div>
+
+</section>
+</div>
+
+<footer class="footer">
+    <div class="wrap-footer">
+      <div class="text-element-footer element-footer">
+        <h3>Restaurante</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit praesentium alias dignissimos vel necessitatibus in, corrupti asperiores nostrum repellendus ut architecto assumenda enim nam. Et magni optio veritatis placeat maxime.</p>
+      </div>
+
+      <div class="text-element-footer element-footer">
+        <h5>Dirección:</h5>
+        <ul>
+        <li>Calle 8 B Sur #3106</li>
+        <li>Heroica Puebla de Zaragoza</li>
+        <li>Contacto: +52 1 2222036090</li>
+       </ul>
+     </div>
+
+     <div class="text-element-footer element-footer">
+      <h4>Más información</h4>
+      <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="menú.html">Menú</a></li>
+      <li><a href="contactanos.html">Contáctanos</a></li>
     </ul>
     </div>
 
