@@ -714,11 +714,12 @@ form > button:hover,
 
 .menu-seleccion {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  margin: 0 auto; 
   overflow-x: auto; 
-  white-space: nowrap; 
-  margin: 0 auto;
-  width: 100%; 
+  overflow-y: hidden; 
+  background-color: #F4EFE1;
+  width: 100%;
 }
 
 .menu-seleccion button {
@@ -731,9 +732,7 @@ form > button:hover,
   cursor: pointer; /* Cambia el cursor al pasar por el botón */
   border: none;
   border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  margin: 10px 0;
 }
 
 
