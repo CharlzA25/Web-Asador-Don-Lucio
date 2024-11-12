@@ -751,7 +751,7 @@ form > button:hover,
 }
 
 .menu-seleccion button span {
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
 }
 
@@ -953,7 +953,7 @@ form > button:hover,
 
 .food span{
   font-size: 25px;
-  margin: 40px;
+  margin: 40px auto;
   font-family: var(--Titulos);
   color: #282828;
   text-align: center;
