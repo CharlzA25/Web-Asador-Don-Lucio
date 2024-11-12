@@ -714,11 +714,11 @@ form > button:hover,
 
 .menu-seleccion {
   display: flex;
-  justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #F4EFE1;
-  width: 100%;
+  justify-content: flex-start;
+  overflow-x: auto; 
+  white-space: nowrap; 
+  margin: 0 auto;
+  width: 100%; 
 }
 
 .menu-seleccion button {
@@ -950,9 +950,9 @@ form > button:hover,
   color: #282828;
 }
 
-.food h3{
+.food span{
   font-size: 25px;
-  margin: 10px;
+  margin: 10px auto;
   font-family: var(--Titulos);
   color: #282828;
   text-align: center;
