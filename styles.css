@@ -945,14 +945,14 @@ form > button:hover,
 
 .food h2{
   font-size: 50px;
-  padding-top: 20px;
+  padding-top: 10px;
   font-family: var(--Titulos);
   color: #282828;
 }
 
-.food span{
+.food h3{
   font-size: 25px;
-  margin: 40px auto;
+  margin: 10px;
   font-family: var(--Titulos);
   color: #282828;
   text-align: center;
