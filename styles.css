@@ -240,7 +240,8 @@ h3{
   
 }
 .ofert-txt{
-  padding: 25px;
+  padding-left: 25px;
+  padding-rigth: 25px;
   text-align: center;
   background-color: #F4EFE1;
 }
