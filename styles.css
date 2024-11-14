@@ -794,7 +794,7 @@ form > button:hover,
   padding: 30px 1px 30px 1px;
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(280px,1fr));
-  grid-gap: 30px 27px;
+  grid-gap: 30px 15px;
 }
 
 .food-items{
