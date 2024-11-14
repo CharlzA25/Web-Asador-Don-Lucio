@@ -150,16 +150,11 @@ img{
   text-align: center;
   background-color: white;
   height: 300px;
-}
-.information-c1{
-  padding: 45px;
-  text-align: center;
-  background-color: white;
-  height: 300px;
+  font-family: var(--Texto);
 }
 
 h3{
-  font-size: 40px;
+  font-size: 35px;
   font-family:var(--Titulos);
   margin-bottom: 15px;
   color: #404140;
@@ -240,10 +235,10 @@ h3{
   
 }
 .ofert-txt{
-  padding-left: 25px;
-  padding-rigth: 25px;
+  padding: 25px;
   text-align: center;
   background-color: #F4EFE1;
+  height: 240px;
 }
 .ofert-img{
   height: 240px;
@@ -429,6 +424,14 @@ footer ul {
   .redesxd{
     justify-content: center;
   }
+
+  .information-c1{
+    padding: 45px;
+    text-align: center;
+    background-color: white;
+    height: 380px;
+    font-family: var(--Texto);
+  }
 }
 
 
@@ -523,6 +526,8 @@ footer ul {
 }
 /*Contáctanos*/
 
+
+
 .body-contact{
   justify-content: center;
   align-items: center;
@@ -541,6 +546,7 @@ footer ul {
   width: 80%;
   max-width: 1000;
   z-index: 5;
+  margin-bottom: 50px;
 }
 
 .Contacus{
@@ -960,12 +966,8 @@ form > button:hover,
 }
 
 .contac-in {
-  width: 80%;
-  margin: auto;
   display: flex;
   flex-wrap: nowrap;
-  margin-top: 80px;
-  margin-bottom: 0;
   padding: 10px;
   border-radius: 10px;
   position: relative;
@@ -997,7 +999,8 @@ form > button:hover,
   z-index: 2; /* Elevar el contenido por encima del fondo semitransparente */
 }
 .contac-dat {
-  flex: 1; 
+  margin-left: 40px;
+  margin-right: 40px;
   text-align: center;
   min-width: 300px; 
   margin-top: auto;
@@ -1289,7 +1292,52 @@ form > button:hover,
   margin-left: 30px;
 }
 
+.submenu-container {
+  position: relative;
+  display: inline-block;
+}
 
+/* Estilo para el submenú oculto */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Justo debajo del enlace principal */
+  left: 0;
+  background-color: #282828;
+  padding: 0.5rem 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  min-width: 200px; /* Ajusta el ancho mínimo para que los elementos se vean bien */
+}
+
+.submenu a {
+  color: #F4EFE1;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  color: #af8740;
+}
+
+/* Muestra el submenú al pasar el cursor */
+.submenu-container:hover .submenu {
+  display: block;
+}
+
+/* Para hacer el menú responsivo */
+@media (max-width: 968px) {
+  .submenu {
+    position: static;
+    box-shadow: none;
+    padding: 0;
+  }
+  .submenu a {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
 /*header fin*/
 
 .abouts {
@@ -1347,6 +1395,49 @@ form > button:hover,
 .abouts .row .contentab p {
   font-family: var(--Texto);
 }
+
+
+.abouts2 {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -50px;
+}
+
+
+.abouts2 .row {
+  display: flex;
+  align-items: center;
+  background: #75612a;
+  flex-wrap: wrap;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 48px;
+}
+
+.abouts2 .row .imag {
+  flex: 1 1 60px;
+}
+
+.abouts2 .row .imag img {
+  width: 100%;
+}
+
+.abouts2 .row .contentab {
+  flex: 1 1 30px;
+  padding: 20px;
+}
+
+.abouts2 .row .contentab h3 {
+  font-size: 30px;
+  color: #282828;
+  padding: 10px 0;
+  font-family: var(--Titulos);
+}
+
+.abouts2 .row .contentab p {
+  font-family: var(--Texto);
+}
+
 
 /* Media Query para pantallas de menos de 700px */
 @media (max-width: 760px) {
