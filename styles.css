@@ -247,6 +247,7 @@ h3{
 .ofert-img img{
   height: 240px;
   width: 100%;
+  object-fit: cover;
 }
 .btn2{
   display: inline-block;
@@ -254,8 +255,11 @@ h3{
   border: 2px solid #d8ba88;
   margin-top: 10px;
   color: #af8740;
-  background-color: #fce5bd;
+  background-color: transparent;
   text-transform: uppercase;
+}
+.btn2:hover{
+  background-color: #f8d79d;
 }
 .bg {
   margin-top: -50px;
@@ -840,39 +844,45 @@ form > button:hover,
 }
 
 
-.details{
-  padding:  20px 10px;
-  display: grid;
-  grid-template-rows: auto ltf 50px;
-  grid-row-gap: 15px;
+.details {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribuye uniformemente los elementos */
+  
 }
-.details-sub{
+.details-sub {
   display: grid;
   grid-template-columns: auto auto;
 }
-.details-sub>h5{
-  font-weight: 600 ;
+.details-sub > h5 {
+  font-weight: 600;
   font-size: 17px;
 }
-.description{
+.description {
   text-align: left;
   font-family: var(--Titulos);
+  width: 250px;
 }
-.price{
+.price {
   text-align: right;
   color: var(--dorado);
   font-family: var(--Texto);
   font-size: 20px;
   margin-left: 30px;
 }
-.details>p{
+
+.details > p {
+  margin-top: 10px;
   font-family: var(--Texto);
   color: #6f6f6f;
-    font-size: 14px;
-    line-height: 28px;
-    font-weight: 400;
-    align-self: stretch;
-    text-align: left;
+  font-size: 14px;
+  line-height: 20px; /* Espacio entre líneas */
+  font-weight: 400;
+  text-align: left;
+  height: 80px; /* Altura fija para las descripciones */
+  overflow: hidden; /* Oculta cualquier contenido que sobrepase la altura */
+  align-self: start; /* Alinea las descripciones al inicio de su contenedor */
 }
 
 .menudes-seleccion{
