@@ -862,7 +862,7 @@ form > button:hover,
 .description {
   text-align: left;
   font-family: var(--Titulos);
-  width: 250px;
+  max-width: 220px;
 }
 .price {
   text-align: right;
