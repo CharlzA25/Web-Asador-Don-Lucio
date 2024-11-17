@@ -810,7 +810,9 @@ form > button:hover,
   position: relative;
   width: 100%;
   border-radius: 15px 15px 0 0;
-  max-height: 35vh;
+  max-height: 35vh;
+  min-height: 35vh;
+  object-fit: cover;
 }
 
 .menu3{
@@ -834,7 +836,7 @@ form > button:hover,
   width: 100%;
   border-radius: 15px 15px 0 0;
   max-height: 35vh;
-  object-fit: scale-down
+  object-fit:scale-down;
 }
 
 
