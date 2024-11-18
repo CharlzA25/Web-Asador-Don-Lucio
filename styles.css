@@ -789,6 +789,8 @@ form > button:hover,
       margin-right: 10px;
 
   }
+
+  
 }
 
 
@@ -839,7 +841,7 @@ form > button:hover,
   position: relative;
   width: 100%;
   border-radius: 15px 15px 0 0;
-  max-height: 35vh;
+  max-height: 32vh;
   object-fit:scale-down;
 }
 
@@ -849,7 +851,6 @@ form > button:hover,
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Distribuye uniformemente los elementos */
-  
 }
 .details-sub {
   display: grid;
@@ -857,12 +858,12 @@ form > button:hover,
 }
 .details-sub > h5 {
   font-weight: 600;
-  font-size: 17px;
+  font-size: 16px;
 }
 .description {
   text-align: left;
   font-family: var(--Titulos);
-  max-width: 220px;
+  max-width: 250px;
 }
 .price {
   text-align: right;
@@ -880,9 +881,22 @@ form > button:hover,
   line-height: 20px; /* Espacio entre líneas */
   font-weight: 400;
   text-align: left;
-  height: 80px; /* Altura fija para las descripciones */
-  overflow: hidden; /* Oculta cualquier contenido que sobrepase la altura */
+  height: 95px;
   align-self: start; /* Alinea las descripciones al inicio de su contenedor */
+}
+
+.details > .pfour{
+  
+  height: 120px; /* Altura fija para las descripciones */
+}
+
+.details > .pthree{
+  
+  height: 50px; /* Altura fija para las descripciones */
+}
+
+.details > .pauto {
+  height: auto;
 }
 
 .menudes-seleccion{
@@ -959,6 +973,22 @@ form > button:hover,
   text-align: center;
 }
 
+
+@media (max-width: 768px) {
+
+  .details > p{
+    height: auto;
+  }
+  .details > .pfour{
+  
+    height: auto; 
+  }
+  
+  .details > .pthree{
+    
+    height: auto; 
+  }
+}
 
 
 .food h2{
