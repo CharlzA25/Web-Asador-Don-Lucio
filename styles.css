@@ -1543,7 +1543,7 @@ form > button:hover,
 }
 
 .segment2 .box-container .box .content h4{
-  font-size: 25px;
+  font-size: 20px;
   font-family: var(--Texto);
   color: var(--Background);
   padding: 2px;
@@ -1578,6 +1578,7 @@ form > button:hover,
 
 .segment3 .box-container .box {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
   padding: 3rem 2rem;
@@ -1590,11 +1591,14 @@ form > button:hover,
   padding: 0.5rem;
 }
 
+.box > .pabus{
+  margin-top: 38px;
+}
 .segment3 .box-container .box h3 {
-  font-size: 25px;
+  font-size: 20px;
   font-family: var(--Titulos);
   color: var(--BackSecundary);
-  padding: 5px;
+  padding: 7px;
 }
 
 .segment3 .box-container .box .s3 {
@@ -1608,6 +1612,9 @@ form > button:hover,
 @media (max-width: 700px) {
   .segment3 .box-container {
     grid-template-columns: 1fr; /* Cambia a una sola columna */
+  }
+  .box > .pabus{
+    margin-top: auto;
   }
 }
 /*Header index*/
