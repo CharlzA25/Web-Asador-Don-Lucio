@@ -816,8 +816,8 @@ form > button:hover,
   position: relative;
   width: 100%;
   border-radius: 15px 15px 0 0;
-  max-height: 35vh;
-  min-height: 35vh;
+  max-height: 40vh;
+  min-height: 40vh;
   object-fit: cover;
 }
 
@@ -888,6 +888,16 @@ form > button:hover,
 .details > .pfour{
   
   height: 120px; /* Altura fija para las descripciones */
+}
+
+.details > .pfive{
+  
+  height: 198px; /* Altura fija para las descripciones */
+}
+
+.details > .psix{
+  
+  height: 239px; /* Altura fija para las descripciones */
 }
 
 .details > .pthree{
