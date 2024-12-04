@@ -773,6 +773,10 @@ form > button:hover,
   text-align: center;
   display: none;
 }
+
+.Tacos2{
+  display: none;
+}
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
   .menu-seleccion {
