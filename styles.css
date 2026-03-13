@@ -1509,6 +1509,9 @@ form > button:hover,
   .abouts .row .imag {
     order: 2; /* La imagen aparece después del texto */
   }
+   .abouts .row .imag2 {
+    order: 2; /* La imagen aparece después del texto */
+  }
 }
 .segment2 {
   width: 90%;
@@ -1714,4 +1717,122 @@ form > button:hover,
 
 .home3 h1{
   margin-top: 30px;
+}
+
+
+
+
+
+.homeR{
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(0 0 0 / .50),
+   rgb(0 0 0 / .3)), url(./Recetas/Fondo-recetas.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.homeR .content6{
+  max-width: 50rem;
+}
+
+.homeR .content6 h3{
+  padding-left: 30px;
+  margin-top: 0px;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #cacaca;
+  font-family: var(--Titulos);
+}
+
+.homeR .content6 p{
+  padding-left: 30px;
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 1.8;
+  color: #F4EFE1;
+}
+.homeR .content6 .btns{
+  margin-left: 30px;
+}
+
+.submenu-container {
+  position: relative;
+  display: inline-block;
+}
+
+
+.receta{
+    text-align:center;
+    max-width:500px;
+    margin:auto;
+}
+
+.ingredientes{
+    list-style-position: inside;
+    padding:0;
+    margin:5px 0;
+}
+
+.ingredientes li{
+    margin:2px 0;
+    line-height:1;
+    font-family: var(--Texto);
+}
+
+.abouts .row .imag2 {
+  flex: 1 1 60px;
+}
+
+.abouts .row .imag2 img {
+  width: 100%;
+}
+.abouts2 .row .imag2 {
+  flex: 1 1 60px;
+}
+
+.abouts2 .row .imag2 img {
+  width: 100%;
+}
+.segment2 .box-container .box .imag2 {
+  height: 300px;
+  overflow: hidden;
+  width: 10%;
+}
+
+.segment2 .box-container .box .imag2 img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.segment2 .box-container .box:hover .imag2 img {
+  transform: scale(1.1);
+}
+.abouts .imag2 img{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  border-radius:1px;
+}
+.preparacion{
+    max-width:700px;
+    margin:auto;
+    padding-left:20px;
+}
+
+
+.preparacion li{
+    margin:6px 0;
+    line-height:1.4;
+    font-family: var(--Texto);
+}
+
+.food{
+  display:none;
+}
+
+.food.activa{
+  display:block;
 }
