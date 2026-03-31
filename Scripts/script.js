@@ -13,37 +13,7 @@ function showSection(sectionId) {
     }
   }
   
-  function showSection(sectionId) {
-
-  const receta = document.getElementById(sectionId);
-  const selector = document.getElementById("segment2");
-
-  if (!receta) {
-    console.error("No se encontró la sección:", sectionId);
-    return;
-  }
-
-  // ocultar selector
-  if (selector) {
-    selector.style.display = "none";
-  }
-
-  // mostrar receta
-  receta.style.display = "block";
-
-  // scroll hacia receta
-  receta.scrollIntoView({ behavior: "smooth" });
-}
   
-function volverRecetas(){
-  document.getElementById("segment2").style.display = "block";
-
-  const recetas = document.querySelectorAll(".food");
-  recetas.forEach(r => r.style.display = "none");
-
-  document.getElementById("segment2").scrollIntoView({behavior:"smooth"});
-}
-
   window.onload = function() {
     
     const urlParams = new URLSearchParams(window.location.search);
@@ -55,6 +25,10 @@ function volverRecetas(){
   };
   
 
+
+
+
+  
 
   const horaInicio = 19; // 7 PM (en formato 24h)
   const horaFin = 23;    // 11 PM (en formato 24h)
