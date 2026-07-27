@@ -146,7 +146,7 @@ img{
   flex-basis: 30%;
 }
 .information-c1{
-  padding: 45px;
+  padding: 32px 45px;
   text-align: center;
   background-color: white;
   height: 300px;
@@ -186,6 +186,93 @@ h3{
   text-transform: uppercase;
 }
 
+.information-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: min(100%, 640px);
+  margin: 30px auto 0;
+}
+
+.information-actions .btn-action {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  width: 260px;
+  min-height: 64px;
+  padding: 9px 14px 9px 10px;
+  margin-top: 0;
+  border: 1px solid #8aa965;
+  border-radius: 12px;
+  color: #26351e;
+  background: linear-gradient(135deg, #a9c982 0%, #9ab973 100%);
+  box-shadow: 0 8px 18px rgba(78, 105, 48, 0.22);
+  font: inherit;
+  letter-spacing: normal;
+  text-align: left;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.information-actions .btn-action:hover,
+.information-actions .btn-action:focus-visible {
+  border-color: #789653;
+  background: linear-gradient(135deg, #8fab6c 0%, #789653 100%);
+  box-shadow: 0 12px 22px rgba(78, 105, 48, 0.32);
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.information-actions .btn-action:active {
+  border-color: #617c40;
+  background: #617c40;
+  box-shadow: 0 4px 10px rgba(78, 105, 48, 0.25);
+  transform: translateY(1px);
+}
+
+.btn-action-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 3px 8px rgba(50, 70, 35, 0.14);
+}
+
+.btn-action-icon img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.btn-action-arrow {
+  margin-left: auto;
+  font-size: 23px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.btn-action:hover .btn-action-arrow,
+.btn-action:focus-visible .btn-action-arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 700px) {
+  .information-actions {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .information-actions .btn-action {
+    width: min(100%, 280px);
+  }
+}
+
 .our {
   margin-top: -50px;
   padding: 250px 0;
@@ -200,7 +287,7 @@ h3{
 .our2 {
   margin-top: -50px;
   padding: 200px 0;
-  background: linear-gradient(to bottom, rgb(0 0 0 / .50), rgb(0 0 0 / .3)), url(/Menu/Parrilla/Parrilla-Asador\ entero.jpg);
+  background: linear-gradient(to bottom, rgb(0 0 0 / .50), rgb(0 0 0 / .3)), url(/backgrounds/Menú.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -360,11 +447,79 @@ footer ul {
 .footer-creds {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 30px;
   padding: 1rem;
   color: #d8ba88;
   font-size: 0.9rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.copy-creds {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.copyright {
+  color: rgba(216, 186, 136, 0.78);
+  line-height: 1.5;
+}
+
+.developer-credit {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.developer-credit > span {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.developer-credit a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px 7px 8px;
+  border: 1px solid rgba(154, 185, 115, 0.6);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(154, 185, 115, 0.1);
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.developer-credit a img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.developer-name {
+  color: #b4d38d;
+  font-weight: 700;
+}
+
+.developer-cta {
+  padding-left: 8px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.78rem;
+}
+
+.developer-credit a:hover,
+.developer-credit a:focus-visible {
+  border-color: #9ab973;
+  background-color: rgba(154, 185, 115, 0.22);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.developer-credit a:active {
+  background-color: rgba(154, 185, 115, 0.32);
+  transform: translateY(0);
 }
 
 .legal-creds ul {
@@ -397,12 +552,28 @@ footer ul {
     flex-direction: column;
     text-align: center;
   }
+
+  .developer-credit {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
   .wrap-footer {
     grid-template-columns: repeat(1, 1fr);
     text-align: center;
+  }
+
+  .developer-credit {
+    flex-direction: column;
+  }
+
+  .developer-credit a {
+    padding-right: 9px;
+  }
+
+  .developer-cta {
+    display: none;
   }
   
 }
@@ -430,11 +601,69 @@ footer ul {
   }
 
   .information-c1{
-    padding: 45px;
+    padding: 30px 20px 38px;
     text-align: center;
     background-color: white;
-    height: 380px;
+    height: auto;
+    min-height: 0;
     font-family: var(--Texto);
+  }
+
+  .information-c1 h3 {
+    margin-bottom: 12px;
+    font-size: clamp(27px, 8vw, 32px);
+    line-height: 1.15;
+  }
+
+  .information-c1 p {
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .information-actions {
+    width: 100%;
+    margin-top: 24px;
+    gap: 12px;
+  }
+
+  .information-actions .btn-action {
+    width: min(100%, 280px);
+    min-height: 58px;
+  }
+}
+
+@media (max-width: 380px) {
+  .information-c1 {
+    padding: 26px 16px 34px;
+  }
+
+  .information-c1 p {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .information-actions {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .information-actions .btn-action {
+    min-height: 54px;
+    padding: 7px 12px 7px 8px;
+    font-size: 0.8rem;
+  }
+
+  .btn-action-icon {
+    flex-basis: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .btn-action-icon img {
+    width: 23px;
+    height: 23px;
   }
 }
 
@@ -1641,7 +1870,7 @@ form > button:hover,
   display: flex;
   align-items: center;
   background: linear-gradient(to bottom, rgb(0 0 0 / .50),
-   rgb(0 0 0 / .3)), url(./backgrounds/Menú.gif) no-repeat;
+   rgb(0 0 0 / .3)), url(/Menu/Parrilla/Parrilla-Asador\ entero.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -1835,4 +2064,335 @@ form > button:hover,
 
 .food.activa{
   display:block;
+}
+
+/* Responsive exclusivo de la página de inicio */
+.index-page {
+  overflow-x: hidden;
+}
+
+.index-page .container {
+  width: min(1200px, calc(100% - 32px));
+}
+
+.index-page .home1 {
+  min-height: clamp(460px, 70vh, 720px);
+  padding-top: 80px;
+}
+
+.index-page .home1 .contentin img {
+  width: clamp(170px, 18vw, 250px);
+  height: auto;
+}
+
+.index-page .information-content {
+  align-items: stretch;
+}
+
+.index-page .information-1 {
+  flex-basis: 32%;
+}
+
+.index-page .information2 {
+  flex-basis: 68%;
+}
+
+.index-page .information-a1,
+.index-page .information-a1 img {
+  height: 100%;
+  min-height: 320px;
+}
+
+.index-page .information-a1 img {
+  display: block;
+  object-fit: cover;
+}
+
+.index-page .information-c1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  min-height: 320px;
+}
+
+.index-page .our h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.2;
+}
+
+.index-page .ofert-content {
+  align-items: stretch;
+}
+
+.index-page .ofert-1 {
+  min-width: 0;
+}
+
+.index-page .ofert-txt,
+.index-page .ofert-img,
+.index-page .ofert-img img {
+  width: 100%;
+}
+
+.index-page .ofert-img img {
+  display: block;
+  object-fit: cover;
+}
+
+.index-page .legal-creds ul {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.index-page .legal-creds ul li {
+  padding-right: 0;
+}
+
+@media (max-width: 991px) {
+  .index-page .header-menu3 {
+    min-height: 72px;
+    padding: 10px 20px;
+  }
+
+  .index-page .header-menu3 .logo img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+  }
+
+  .index-page .header-menu3 .navbar1 {
+    top: 100%;
+    height: auto;
+    max-height: calc(100svh - 72px);
+    overflow-y: auto;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+  }
+
+  .index-page .header-menu3 .navbar1 a {
+    margin: 0;
+    padding: 15px 24px;
+  }
+
+  .index-page .submenu-container {
+    display: block;
+  }
+
+  .index-page .submenu {
+    min-width: 0;
+    background-color: rgba(0, 0, 0, 0.14);
+  }
+
+  .index-page .home1 {
+    min-height: clamp(420px, 62svh, 600px);
+    padding: 72px 20px 20px;
+    background-position: center;
+  }
+
+  .index-page .information {
+    width: 100%;
+  }
+
+  .index-page .information-content {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .index-page .information-a1,
+  .index-page .information-a1 img {
+    height: clamp(210px, 38vw, 320px);
+    min-height: 0;
+  }
+
+  .index-page .information-c1 {
+    min-height: 0;
+  }
+
+  .index-page .our {
+    padding: clamp(110px, 20vw, 170px) 24px;
+  }
+
+  .index-page .ofert-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(calc(100% - 32px), 760px);
+    gap: 24px;
+    padding: 30px 0;
+    box-shadow: none;
+  }
+
+  .index-page .ofert-1 {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  }
+
+  .index-page .ofert-txt {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 220px;
+    height: auto;
+  }
+
+  .index-page .ofert-img {
+    order: 2;
+    height: 230px;
+    margin-bottom: 0;
+  }
+
+  .index-page .ofert-img img {
+    height: 100%;
+  }
+
+  .index-page .ofert-content h3 {
+    margin-top: 0;
+    font-size: clamp(30px, 5vw, 40px);
+  }
+
+  .index-page .our2 {
+    min-height: 300px;
+    margin-top: 0;
+    padding: clamp(120px, 20vw, 170px) 24px;
+  }
+
+  .index-page .wrap-footer {
+    width: min(calc(100% - 32px), 760px);
+    column-gap: 32px;
+  }
+
+  .index-page .footer-creds {
+    width: min(calc(100% - 32px), 760px);
+  }
+
+  .index-page .legal-creds ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .index-page .container {
+    width: calc(100% - 24px);
+  }
+
+  .index-page .home1 {
+    min-height: clamp(360px, 58svh, 520px);
+    background-position: 42% center;
+  }
+
+  .index-page .home1 .contentin img {
+    width: clamp(145px, 46vw, 190px);
+  }
+
+  .index-page .information {
+    width: 100%;
+  }
+
+  .index-page .information-a1,
+  .index-page .information-a1 img {
+    height: clamp(180px, 56vw, 260px);
+  }
+
+  .index-page .information-c1 {
+    padding: 30px 18px 36px;
+  }
+
+  .index-page .information-c1 p {
+    font-size: clamp(0.78rem, 3.4vw, 0.9rem);
+    line-height: 1.5;
+  }
+
+  .index-page .information-actions .btn-action {
+    width: min(100%, 300px);
+  }
+
+  .index-page .our {
+    padding: 110px 20px;
+    background-position: center;
+  }
+
+  .index-page .our h2 {
+    font-size: clamp(27px, 9vw, 36px);
+  }
+
+  .index-page .ofert-content {
+    grid-template-columns: 1fr;
+    width: calc(100% - 24px);
+    gap: 20px;
+    padding: 24px 0;
+  }
+
+  .index-page .ofert-txt {
+    min-height: 210px;
+    padding: 28px 22px;
+  }
+
+  .index-page .ofert-img {
+    height: clamp(210px, 68vw, 290px);
+  }
+
+  .index-page .our2 {
+    min-height: 260px;
+    padding: 110px 20px;
+    background-position: center;
+  }
+
+  .index-page footer {
+    padding: 24px 0 16px;
+  }
+
+  .index-page .wrap-footer {
+    grid-template-columns: 1fr;
+    width: calc(100% - 40px);
+    gap: 28px;
+    margin: 0 auto 24px;
+    padding: 0;
+  }
+
+  .index-page .footer-creds {
+    width: calc(100% - 40px);
+    gap: 20px;
+    padding: 22px 0 0;
+    border-top: 1px solid rgba(216, 186, 136, 0.2);
+  }
+
+  .index-page .developer-credit {
+    width: 100%;
+  }
+
+  .index-page .developer-credit a {
+    max-width: 100%;
+  }
+
+  .index-page .legal-creds ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .index-page .header-menu3 {
+    padding-inline: 14px;
+  }
+
+  .index-page .information-c1 {
+    padding-inline: 14px;
+  }
+
+  .index-page .information-actions .btn-action {
+    font-size: 0.75rem;
+  }
+
+  .index-page .btn-action-arrow {
+    font-size: 19px;
+  }
+
+  .index-page .developer-credit a {
+    justify-content: center;
+    width: 100%;
+  }
 }
