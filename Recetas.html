@@ -14,7 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./Logo/LogoSolo.png">
 </head>
-<body>
+<body class="recipes-page">
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQT62SL4"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -30,8 +30,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="menú.html">Menú</a>
       <a href="Recetas.html">Recetas</a>
       <div class="submenu-container">
-        <a href="contactanos.html#bolsa-trabajo">Contáctanos</a>
-        <div class="submenu">
+        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="contact-submenu-recipes">Contáctanos</button>
+        <div class="submenu" id="contact-submenu-recipes">
           <a href="contactanos.html#bolsa-trabajo">Bolsa de trabajo</a>
           <a href="contactanos.html#ubicacion">Ubicación</a>
         </div>
@@ -64,7 +64,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="box">
     <div class="imag">
-      <img src="./Recetas/Camaron-R.jpg" alt="lucio">
+      <img src="./optimized/Recetas/Camaron-R.webp" alt="lucio" loading="lazy" decoding="async">
     </div>
 
     <div class="content">
@@ -89,7 +89,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="box">
     <div class="imag">
-      <img src="./Recetas/Coctel-R.JPG" alt="lucio">
+      <img src="./optimized/Recetas/Coctel-R.webp" alt="lucio" loading="lazy" decoding="async">
     </div>
 
     <div class="content">
@@ -111,7 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="box">
     <div class="imag">
-      <img src="./Recetas/Pulpo a la gallega (1).jpg" alt="lucio">
+      <img src="./optimized/Recetas/Pulpo a la gallega (1).webp" alt="lucio" loading="lazy" decoding="async">
     </div>
 
     <div class="content">
@@ -134,7 +134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
  <div class="box">
     <div class="imag">
-      <img src="./Recetas/Pulpo al chimichurri1 (1).jpg" alt="lucio">
+      <img src="./optimized/Recetas/Pulpo al chimichurri1 (1).webp" alt="lucio" loading="lazy" decoding="async">
     </div>
 
     <div class="content">
@@ -166,7 +166,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="row">
 
    <div class="imag">
-      <img src="./Recetas/Coctel2-R.jpg" alt="">
+      <img src="./optimized/Recetas/Coctel2-R.webp" alt="" loading="lazy" decoding="async">
     </div>
 
     <div class="contentab">
@@ -219,7 +219,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="imag2">
-      <img src="./Recetas/Coctel-R.JPG" alt="">
+      <img src="./optimized/Recetas/Coctel-R.webp" alt="" loading="lazy" decoding="async">
     </div>
 
   </div>
@@ -299,7 +299,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="row">
 
     <div class="imag">
-      <img src="./Recetas/preparación.jpeg" alt="">
+      <img src="./optimized/Recetas/preparación.webp" alt="" loading="lazy" decoding="async">
     </div>
 
     <div class="contentab">
@@ -348,7 +348,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="imag2">
-      <img src="./Recetas/Pulpo a la gallega (1).jpg" alt="">
+      <img src="./optimized/Recetas/Pulpo a la gallega (1).webp" alt="" loading="lazy" decoding="async">
     </div>
 
   </div>
@@ -366,7 +366,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="row">
 
     <div class="imag">
-      <img src="./Recetas/preparación.jpeg" alt="">
+      <img src="./optimized/Recetas/preparación.webp" alt="" loading="lazy" decoding="async">
     </div>
 
     <div class="contentab">
@@ -435,7 +435,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="imag2">
-      <img src="./Recetas/Pulpo al chimichurri1 (1).jpg" alt="">
+      <img src="./optimized/Recetas/Pulpo al chimichurri1 (1).webp" alt="" loading="lazy" decoding="async">
     </div>
 
   </div>
@@ -484,7 +484,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    </div>
    <div class="footer-creds">
     <div class="copy-creds">
-      <p>©Carlos A.2024 • Todos los derechos reservados</p>
+      <p class="copyright">© 2026 Asador Don Lucio · Todos los derechos reservados.</p>
+      <div class="developer-credit">
+        <span>Sitio desarrollado y diseñado por</span>
+        <a href="https://wa.me/522441257964?text=Hola,%20me%20interesa%20solicitar%20informes%20o%20una%20cotización%20para%20un%20sitio%20web." target="_blank" rel="noopener noreferrer" title="Solicita una cotización por WhatsApp">
+          <img src="./iconos/social.png" alt="" aria-hidden="true">
+          <span class="developer-name">Kon Developer</span>
+          <span class="developer-cta">Solicita información →</span>
+        </a>
+      </div>
      </div>
      <div class="legal-creds">
       <ul>
@@ -498,13 +506,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </footer>
 
 
-      <script src="./Scripts/scriptnav.js"></script>
-      <script src="./Scripts/scriptrecipes.js"></script>
+      <script src="./Scripts/scriptnav.js" defer></script>
+      <script src="./Scripts/scriptrecipes.js" defer></script>
 </body>
 
 </html>
-
-
 
 
 
