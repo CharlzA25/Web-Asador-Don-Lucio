@@ -5365,6 +5365,68 @@ form > button:hover,
 }
 
 /* Tipografía oficial consistente en todo el sitio */
+/*
+ * Estabilidad y centrado del selector de platillos.
+ * Evita la competencia entre scroll suave, snap y hover tactil.
+ */
+.menu-page .scroll-container {
+  transform: none;
+  backface-visibility: visible;
+  isolation: isolate;
+}
+
+.menu-page .menu-seleccion,
+.menu-page .menu-seleccion.container {
+  align-items: stretch;
+  scroll-behavior: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu-page .menu-seleccion::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-page .menu-seleccion button {
+  justify-content: center;
+  align-self: stretch;
+}
+
+@media (max-width: 768px) {
+  .menu-page {
+    /*
+     * A diferencia de hidden, clip no crea un contenedor de desplazamiento
+     * adicional que compita con position: sticky en navegadores móviles.
+     */
+    overflow-x: clip;
+  }
+
+  .menu-page .scroll-container {
+    contain: none;
+    will-change: auto;
+  }
+
+  .menu-page .menu-seleccion,
+  .menu-page .menu-seleccion.container {
+    align-items: center;
+    scroll-snap-type: none;
+    touch-action: pan-x;
+  }
+
+  .menu-page .menu-seleccion button {
+    justify-content: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    scroll-snap-align: none;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .menu-page .menu-seleccion button:hover img.icono {
+    transform: none;
+  }
+}
+
 body h1,
 body h2,
 body h3,
