@@ -415,6 +415,62 @@ footer ul{
   }
 }
 
+.copy-creds {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.copyright {
+  color: rgba(216, 186, 136, 0.78);
+  line-height: 1.5;
+}
+
+.developer-credit {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.developer-credit a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px 7px 8px;
+  border: 1px solid rgba(154, 185, 115, 0.6);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(154, 185, 115, 0.1);
+}
+
+.developer-credit a img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.developer-name {
+  color: #b4d38d;
+  font-weight: 700;
+}
+
+.developer-cta {
+  padding-left: 8px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 480px) {
+  .developer-credit {
+    justify-content: center;
+  }
+
+  .developer-cta {
+    display: none;
+  }
+}
+
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/
