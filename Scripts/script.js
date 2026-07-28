@@ -1,123 +1,137 @@
+function showSection(sectionId, shouldScroll = true) {
+  let selectedSection = null;
+  document.querySelectorAll(".food").forEach((section) => {
+    const isSelected = section.id === sectionId;
+    section.classList.toggle("activa", isSelected);
+    if (isSelected) selectedSection = section;
+  });
 
-function showSection(sectionId) {
-    
-    const sections = document.querySelectorAll('.food');
-    sections.forEach(section => {
-      section.classList.remove('activa');
-    });
-  
-    
-    const selectedSection = document.getElementById(sectionId);
-    if (selectedSection) {
-      selectedSection.classList.add('activa');
-    }
-  }
-  
-  
-  window.onload = function() {
-    
-    const urlParams = new URLSearchParams(window.location.search);
-    const sectionId = urlParams.get('seccion');
-  
-    
-    const defaultSectionId = 'entradas'; 
-    showSection(sectionId ? sectionId : defaultSectionId);
-  };
-  
-
-
-
-
-  
-
-  const horaInicio = 19; // 7 PM (en formato 24h)
-  const horaFin = 23;    // 11 PM (en formato 24h)
-  
-  const diasMostrar = [3, 4, 5, 6]; // Miércoles a Domingo (0 es Domingo)
-  
-  
-  function obtenerFechaHoraCDMX() {
-      
-      const opciones = {
-          timeZone: 'America/Mexico_City',
-          hour: '2-digit',
-          hour12: false, // Formato 24h
-          weekday: 'numeric'
-      };
-  
-      const formatoHora = new Intl.DateTimeFormat('es-MX', opciones);
-      const ahoraCDMX = formatoHora.formatToParts(new Date());
-  
-      // Obtener las partes de la hora y el día de la semana
-      let horas = 0;
-      let diaSemana = 0;
-      ahoraCDMX.forEach(part => {
-          if (part.type === 'hour') horas = parseInt(part.value);
-          if (part.type === 'weekday') diaSemana = parseInt(part.value) - 1; // Restar 1 para que el domingo sea 0
+  document.querySelectorAll("#menu-seleccion button").forEach((button) => {
+    const target = button.getAttribute("onclick")?.match(/showSection\('([^']+)'\)/)?.[1];
+    const isActive = target === sectionId;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+    if (isActive) {
+      const menu = document.getElementById("menu-seleccion");
+      menu?.scrollTo({
+        left: button.offsetLeft - (menu.clientWidth - button.offsetWidth) / 2,
+        behavior: shouldScroll ? "smooth" : "auto",
       });
-  
-      return { horas, diaSemana };
+    }
+  });
+
+  if (selectedSection && shouldScroll) {
+    /*
+     * Esperamos a que las secciones ocultas cambien el layout y fijamos el
+     * inicio de la categoría debajo de la navegación fija.
+     */
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        const scrollMargin = Number.parseFloat(
+          window.getComputedStyle(selectedSection).scrollMarginTop
+        ) || 0;
+        const sectionTop =
+          selectedSection.getBoundingClientRect().top + window.scrollY;
+
+        window.scrollTo({
+          top: Math.max(0, sectionTop - scrollMargin),
+          behavior: "smooth",
+        });
+      });
+    });
   }
-  
-  function verificarHoraYDia() {
-      const { horas, diaSemana } = obtenerFechaHoraCDMX();
-  
-      if (diasMostrar.includes(diaSemana) && horas >= horaInicio && horas <= horaFin) {
-          document.getElementById('Tacos').style.display = 'block';
-      } else {
-          document.getElementById('Tacos').style.display = 'none';
+}
+
+function createDishPlaceholder() {
+  const placeholder = document.createElement("div");
+  placeholder.className = "food-placeholder";
+  placeholder.setAttribute("role", "img");
+  placeholder.setAttribute("aria-label", "Imagen del platillo próximamente");
+  placeholder.innerHTML = `
+    <img src="./Logo/LogoSolo.png" alt="" aria-hidden="true" width="72" height="72">
+    <span>Imagen próximamente</span>
+  `;
+  return placeholder;
+}
+
+function addMissingDishPlaceholders() {
+  document.querySelectorAll(".food").forEach((section) => {
+    const cards = [...section.querySelectorAll(".food-items, .food-items2")];
+    const sectionHasImages = cards.some((card) => card.querySelector(":scope > img"));
+
+    section.classList.toggle("food--text-only", !sectionHasImages);
+    if (!sectionHasImages) return;
+
+    cards.forEach((card) => {
+      if (!card.querySelector(":scope > img, :scope > .food-placeholder")) {
+        card.prepend(createDishPlaceholder());
       }
+    });
+  });
+}
+
+document.addEventListener("error", (event) => {
+  const image = event.target;
+  const card = image.closest?.(".food-items, .food-items2");
+  if (image.tagName === "IMG" && card && image.parentElement === card) {
+    image.replaceWith(createDishPlaceholder());
   }
-  
-  // Verificar cada minuto
-  setInterval(verificarHoraYDia, 60000); 
-  
-  // Verificar al cargar la página
-  verificarHoraYDia();
+}, true);
 
+function getMexicoCityTime() {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Mexico_City",
+    hour: "numeric",
+    hourCycle: "h23",
+    weekday: "short",
+  }).formatToParts(new Date());
 
+  const hour = Number(parts.find((part) => part.type === "hour")?.value ?? 0);
+  const weekday = parts.find((part) => part.type === "weekday")?.value;
+  return { hour, weekday };
+}
 
+function updateTacosVisibility() {
+  const tacos = document.getElementById("Tacos");
+  if (!tacos) return;
+
+  const { hour, weekday } = getMexicoCityTime();
+  const availableDays = new Set(["Wed", "Thu", "Fri", "Sat", "Sun"]);
+  tacos.hidden = !(availableDays.has(weekday) && hour >= 19 && hour <= 23);
+}
 
 function scrollMenu(distance) {
-    const container = document.getElementById('menu-seleccion');
-    container.scrollBy({ left: distance, behavior: 'smooth' });
+  document.getElementById("menu-seleccion")?.scrollBy({
+    left: distance,
+    behavior: "smooth",
+  });
 }
 
+function updateMenuScrollControls() {
+  const menu = document.getElementById("menu-seleccion");
+  const previous = document.querySelector(".scroll-button.left");
+  const next = document.querySelector(".scroll-button.right");
+  if (!menu || !previous || !next) return;
 
-
-
-
-
-
-function mostrarSeccion() {
-    // Obtener el fragmento de la URL (por ejemplo, "#seccion2")
-    const seccionID = window.location.hash;
-
-    // Ocultar todas las secciones
-    const secciones = document.querySelectorAll('.seccion');
-    secciones.forEach(seccion => {
-        seccion.style.display = 'none';
-    });
-
-    // Mostrar solo la sección especificada por el ID de la URL
-    if (seccionID) {
-        const seccionMostrar = document.querySelector(seccionID);
-        if (seccionMostrar) {
-            seccionMostrar.style.display = 'block';
-        }
-    }
+  const maxScroll = Math.max(0, menu.scrollWidth - menu.clientWidth);
+  previous.disabled = menu.scrollLeft <= 2;
+  next.disabled = menu.scrollLeft >= maxScroll - 2;
 }
 
-// Ejecutar la función al cargar la página
-window.onload = mostrarSeccion;
+document.addEventListener("DOMContentLoaded", () => {
+  const requestedSection = new URLSearchParams(location.search).get("seccion");
+  addMissingDishPlaceholders();
+  showSection(requestedSection || "entradas", false);
+  updateTacosVisibility();
+  updateMenuScrollControls();
+  document.getElementById("menu-seleccion")?.addEventListener("scroll", updateMenuScrollControls, { passive: true });
+  window.addEventListener("resize", updateMenuScrollControls, { passive: true });
+});
 
-// Ejecutar la función cada vez que se cambie el hash de la URL
-window.onhashchange = mostrarSeccion;
+const availabilityTimer = window.setInterval(() => {
+  if (!document.hidden) updateTacosVisibility();
+}, 60_000);
 
-
-
-
-
-
-
- 
+window.addEventListener("pagehide", () => {
+  window.clearInterval(availabilityTimer);
+}, { once: true });

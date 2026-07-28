@@ -1,69 +1,115 @@
-// Arrays de imágenes para cada sección
-const imagenesFuego = [
-    { src: "./Menu/Cortes/Cortes-Arrachera.jpg", alt: "Imagen de Fuego 1" },
-    { src: "./Menu/Cortes/Cortes-Costilla de res 24hrs.jpg", alt: "Imagen de Fuego 2" },
-    { src: "./Menu/Cortes/Cortes-Rib eye asado.jpg", alt: "Imagen de Fuego 3" }
+const galleries = [
+  {
+    id: "imagenesFuego",
+    index: 0,
+    images: [
+      { src: "./optimized/Menu/Cortes/Cortes-Arrachera.webp", alt: "Arrachera a la parrilla" },
+      { src: "./optimized/Menu/Cortes/Cortes-Costilla de res 24hrs.webp", alt: "Costilla de res" },
+      { src: "./optimized/Menu/Cortes/Cortes-Rib eye asado.webp", alt: "Rib eye asado" },
+    ],
+  },
+  {
+    id: "imagenesMar",
+    index: 0,
+    images: [
+      { src: "./optimized/Menu/Del mar/Del mar-Pulpo con verduras.webp", alt: "Pulpo con verduras" },
+      { src: "./optimized/Menu/Del mar/Fettuccine Frutti di mare.webp", alt: "Fettuccine frutti di mare" },
+      { src: "./optimized/Menu/Del mar/Del mar-Salmón con salsa de mantequilla y naranja con puré de camote con piña6.webp", alt: "Salmón con salsa de mantequilla y naranja" },
+    ],
+  },
+  {
+    id: "imagenesAire",
+    index: 0,
+    images: [
+      { src: "./optimized/Menu/Del aire/Del aire-Pechuga pollo con espinacas a la crema.webp", alt: "Pechuga con espinacas a la crema" },
+      { src: "./optimized/Menu/Del aire/Del aire-Pechuga pollo en pipián de melón.webp", alt: "Pechuga en pipián de melón" },
+      { src: "./optimized/Menu/Del aire/Del aire-Pechuga pollo con mermelada cebolla y puré d camote con piña.webp", alt: "Pechuga con mermelada de cebolla" },
+    ],
+  },
+  {
+    id: "imagenesMixologia",
+    index: 0,
+    images: [
+      { src: "./optimized/Menu/Bebida/Bebidas-Hígole.webp", alt: "Cóctel Hígole" },
+      { src: "./optimized/Menu/Bebida/Bebidas-La dolce far niente.webp", alt: "Cóctel La dolce far niente" },
+      { src: "./optimized/Menu/Bebida/SUPERSTYLIN.webp", alt: "Cóctel Superstylin" },
+    ],
+  },
 ];
 
-const imagenesMar = [
-    { src: "./Menu/Del mar/Del mar-Pulpo con verduras.jpg", alt: "Imagen del Mar 2" },
-    { src: "./Menu/Del mar/Fettuccine Frutti di mare.jpeg", alt: "Imagen del Mar 3" },
-    { src: "./Menu/Del mar/Del mar-Salmón con salsa de mantequilla y naranja con puré de camote con piña6.jpg", alt: "Imagen del Mar 3" }
-];
+const gallerySection = document.querySelector(".ofert");
+let rotationTimer = 0;
+let galleriesVisible = false;
 
-const imagenesAire = [
-    { src: "./Menu/Del aire/Del aire-Pechuga pollo con espinacas a la crema.jpg", alt: "Imagen del Aire 1" },
-    { src: "./Menu/Del aire/Del aire-Pechuga pollo en pipián de melón.jpg", alt: "Imagen del Aire 2" },
-    { src: "./Menu/Del aire/Del aire-Pechuga pollo con mermelada cebolla y puré d camote con piña.jpg", alt: "Imagen del Aire 3" }
-];
+function rotateGalleries() {
+  if (!galleriesVisible || document.hidden) return;
 
-const imagenesMixologia = [
-    { src: "./Menu/Bebida/Bebidas-Hígole.jpg", alt: "Imagen de Mixología 1" },
-    { src: "./Menu/Bebida/Bebidas-La dolce far niente.jpg", alt: "Imagen de Mixología 2" },
-    { src: "./Menu/Bebida/SUPERSTYLIN.jpg", alt: "Imagen de Mixología 3" }
-];
+  galleries.forEach((gallery) => {
+    const image = document.getElementById(gallery.id);
+    if (!image) return;
 
-// Variables para controlar el índice de cada imagen
-let indexFuego = 0;
-let indexMar = 0;
-let indexAire = 0;
-let indexMixologia = 0;
-
-// Funciones para cambiar cada imagen
-function cambiarImagenFuego() {
-    const imgElement = document.getElementById('imagenesFuego');
-    imgElement.src = imagenesFuego[indexFuego].src;
-    imgElement.alt = imagenesFuego[indexFuego].alt;
-    indexFuego = (indexFuego + 1) % imagenesFuego.length;
+    gallery.index = (gallery.index + 1) % gallery.images.length;
+    const next = gallery.images[gallery.index];
+    transitionGalleryImage(image, next);
+  });
 }
 
-function cambiarImagenMar() {
-    const imgElement = document.getElementById('imagenesMar');
-    imgElement.src = imagenesMar[indexMar].src;
-    imgElement.alt = imagenesMar[indexMar].alt;
-    indexMar = (indexMar + 1) % imagenesMar.length;
+async function transitionGalleryImage(image, next) {
+  const preload = new Image();
+  preload.src = next.src;
+
+  try {
+    if (preload.decode) await preload.decode();
+  } catch {
+    return;
+  }
+
+  if (!image.animate) {
+    image.src = next.src;
+    image.alt = next.alt;
+    return;
+  }
+
+  const fadeOut = image.animate([
+    { opacity: 1, transform: "scale(1)" },
+    { opacity: 0, transform: "scale(1.025)" },
+  ], {
+    duration: 260,
+    easing: "ease-in",
+    fill: "forwards",
+  });
+
+  await fadeOut.finished;
+  image.src = next.src;
+  image.alt = next.alt;
+  fadeOut.cancel();
+
+  image.animate([
+    { opacity: 0, transform: "scale(1.025)" },
+    { opacity: 1, transform: "scale(1)" },
+  ], {
+    duration: 520,
+    easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+  });
 }
 
-function cambiarImagenAire() {
-    const imgElement = document.getElementById('imagenesAire');
-    imgElement.src = imagenesAire[indexAire].src;
-    imgElement.alt = imagenesAire[indexAire].alt;
-    indexAire = (indexAire + 1) % imagenesAire.length;
+function scheduleRotation() {
+  window.clearInterval(rotationTimer);
+  if (galleriesVisible && !document.hidden) {
+    rotationTimer = window.setInterval(rotateGalleries, 7000);
+  }
 }
 
-function cambiarImagenMixologia() {
-    const imgElement = document.getElementById('imagenesMixologia');
-    imgElement.src = imagenesMixologia[indexMixologia].src;
-    imgElement.alt = imagenesMixologia[indexMixologia].alt;
-    indexMixologia = (indexMixologia + 1) % imagenesMixologia.length;
+if (gallerySection && "IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(([entry]) => {
+    galleriesVisible = entry.isIntersecting;
+    scheduleRotation();
+  }, { rootMargin: "150px" });
+  observer.observe(gallerySection);
+} else {
+  galleriesVisible = true;
+  scheduleRotation();
 }
 
-// Iniciar el cambio de imágenes cada 10 segundos para cada sección
-setInterval(cambiarImagenFuego, 7000);
-setInterval(cambiarImagenMar, 7000);
-setInterval(cambiarImagenAire, 7000);
-setInterval(cambiarImagenMixologia, 7000);
-
-
-
-
+document.addEventListener("visibilitychange", scheduleRotation);
+window.addEventListener("pagehide", () => window.clearInterval(rotationTimer), { once: true });
