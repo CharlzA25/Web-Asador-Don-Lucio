@@ -2451,7 +2451,7 @@ form > button:hover,
   justify-content: center;
   padding: 80px 24px 0;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.58)),
+    linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)),
     url("./Menu/Parrilla/Parrilla-Asador entero.jpg") center / cover no-repeat;
 }
 
@@ -2470,6 +2470,20 @@ form > button:hover,
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.75));
 }
 
+.index-page .information-a1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.index-page .information-a1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
 @media (max-width: 991px) {
   .index-page .header-menu3 {
     min-height: 68px;
@@ -2478,8 +2492,8 @@ form > button:hover,
 
   .index-page .header-menu3 .logo {
     flex-basis: 48px;
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
   }
 
   .index-page .header-menu3 .logo img {
@@ -5438,4 +5452,247 @@ body h6 {
 
 body p {
   font-family: var(--Texto) !important;
+}
+
+/* Index: refinamiento puntual del bloque introductorio */
+.index-page .information {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  background: #fbf8f0;
+}
+
+.index-page .information-content {
+  display: grid;
+  grid-template-columns: minmax(390px, 44%) minmax(0, 56%);
+  align-items: stretch;
+  min-height: 390px;
+  margin-top: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #fbf8f0;
+  box-shadow: none;
+}
+
+.index-page .information-1,
+.index-page .information2 {
+  min-width: 0;
+}
+
+.index-page .information-a1 {
+  position: relative;
+  height: 100%;
+  min-height: 390px;
+  overflow: hidden;
+}
+
+.index-page .information-a1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 68%, rgba(29, 30, 28, .18));
+  pointer-events: none;
+}
+
+.index-page .information-a1 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.index-page .information-c1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  min-height: 390px;
+  padding: clamp(42px, 5vw, 68px) clamp(48px, 8vw, 118px);
+  background: #fbf8f0;
+  text-align: left;
+}
+
+.index-page .information-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #af8740;
+  font: 700 .72rem/1.2 var(--Texto);
+  letter-spacing: .19em;
+  text-transform: uppercase;
+}
+
+.index-page .information-eyebrow::before {
+  content: "";
+  width: 38px;
+  height: 1px;
+  background: #af8740;
+}
+
+.index-page .information-c1 h3 {
+  margin: 0 0 20px;
+  color: #1d1e1c;
+  font: 500 clamp(2rem, 3.2vw, 3.15rem)/1.08 var(--Titulos);
+  letter-spacing: -.02em;
+}
+
+.index-page .information-c1 p {
+  max-width: 620px;
+  margin: 0;
+  color: #666158;
+  font: 400 .96rem/1.72 var(--Texto);
+}
+
+.index-page .information-actions {
+  justify-content: flex-start;
+  gap: 14px;
+  width: 100%;
+  margin: 30px 0 0;
+}
+
+.index-page .information-actions .btn-action {
+  width: auto;
+  min-width: 205px;
+  min-height: 52px;
+  padding: 7px 16px 7px 8px;
+  gap: 11px;
+  border: 1px solid #8aa965;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #a9c982 0%, #9ab973 100%);
+  color: #26351e;
+  box-shadow: 0 8px 18px rgba(78, 105, 48, .22);
+  font: 700 .78rem/1.2 var(--Texto);
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.index-page .information-actions .btn-location {
+  border-color: #8aa965;
+  background: transparent;
+  color: #26351e;
+  box-shadow: none;
+}
+
+.index-page .btn-action-icon {
+  flex-basis: 36px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(29, 30, 28, .13);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .55);
+  box-shadow: none;
+}
+
+.index-page .btn-action-icon img {
+  width: 21px;
+  height: 21px;
+}
+
+.index-page .btn-action-arrow {
+  font-size: 18px;
+}
+
+.index-page .information-actions .btn-action:hover,
+.index-page .information-actions .btn-action:focus-visible {
+  border-color: #789653;
+  background: linear-gradient(135deg, #8fab6c 0%, #789653 100%);
+  color: #fff;
+  box-shadow: 0 12px 22px rgba(78, 105, 48, .32);
+  outline: 2px solid transparent;
+  transform: translateY(-2px);
+}
+
+.index-page .information-actions .btn-location:hover,
+.index-page .information-actions .btn-location:focus-visible {
+  border-color: #789653;
+  background: #789653;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(78, 105, 48, .22);
+}
+
+.index-page .our {
+  margin-top: 0;
+}
+
+@media (max-width: 900px) {
+  .index-page .information {
+    padding: 0;
+  }
+
+  .index-page .information-content {
+    grid-template-columns: minmax(300px, 42%) minmax(0, 58%);
+  }
+
+  .index-page .information-c1 {
+    padding: 38px 32px;
+  }
+
+  .index-page .information-actions .btn-action {
+    min-width: 0;
+    flex: 1 1 190px;
+  }
+}
+
+@media (max-width: 700px) {
+  .index-page .information {
+    padding: 0;
+  }
+
+  .index-page .information-content {
+    grid-template-columns: 1fr;
+  }
+
+  .index-page .information-a1,
+  .index-page .information-a1 img {
+    min-height: 280px;
+    height: 280px;
+  }
+
+  .index-page .information-a1::after {
+    background: linear-gradient(0deg, rgba(29, 30, 28, .18), transparent 45%);
+  }
+
+  .index-page .information-c1 {
+    min-height: 0;
+    padding: 38px 26px 42px;
+  }
+
+  .index-page .information-c1 h3 {
+    font-size: clamp(1.9rem, 9vw, 2.55rem);
+  }
+
+  .index-page .information-actions {
+    flex-direction: column;
+  }
+
+  .index-page .information-actions .btn-action {
+    flex: none;
+    width: 100%;
+  }
+}
+
+/* Index: hero con la proporción completa de la fotografía 2560 × 2048 */
+.index-page .home1 {
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 5 / 4;
+  padding: 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, .20), rgba(0, 0, 0, .20)),
+    url("./Menu/Parrilla/Parrilla-Asador entero.jpg") center / contain no-repeat;
+  background-color: #1d1e1c;
+}
+
+@media (max-width: 991px) {
+  .index-page .home1 {
+    min-height: 0;
+    padding: 0;
+    background-position: center;
+  }
 }
