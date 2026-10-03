@@ -61,7 +61,7 @@ if (siteFooter) {
           <img src="./Logo/Logo2.png" alt="Asador Don Lucio">
         </a>
         <p>Ingredientes excepcionales, fuego y técnica para crear una experiencia gastronómica con identidad propia.</p>
-        <a class="footer-reservation" href="https://www.opentable.com.mx/r/asador-don-lucio-reservations-heroica-puebla-de-zaragoza?restref=1492894&amp;lang=es-MX&amp;ot_source=Restaurant%20website" target="_blank" rel="noopener noreferrer">
+        <a class="footer-reservation" href="https://wa.me/522222036090?text=Hola,%20me%20gustaría%20información%20para%20reservar" target="_blank" rel="noopener noreferrer">
           Reserva tu mesa
         </a>
       </section>
@@ -84,7 +84,7 @@ if (siteFooter) {
           Ladrillera de Benítez<br>
           72530 Puebla, Pue.
         </address>
-        <p>Miércoles a sábado · 13:00–23:00<br>Domingo · 13:00–19:00</p>
+        <p>Miércoles a domingo<br>8:00 a 13:00 horas · desayunos<br>13:00 a 19:00 horas · comida</p>
         <a href="contactanos.html#ubicacion">Consultar ubicación</a>
       </section>
 
